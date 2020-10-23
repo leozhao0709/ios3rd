@@ -7,7 +7,7 @@
             buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37B211124F836A53118AE666"
+               BlueprintIdentifier = "37B21C2FB8A9688F9E139736"
                BuildableName = "landmark.app"
                BlueprintName = "landmark"
                ReferencedContainer = "container:landmark.xcodeproj">
@@ -22,7 +22,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37B211124F836A53118AE666"
+            BlueprintIdentifier = "37B21C2FB8A9688F9E139736"
             BuildableName = "landmark.app"
             BlueprintName = "landmark"
             ReferencedContainer = "container:landmark.xcodeproj">

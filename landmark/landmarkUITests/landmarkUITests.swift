@@ -2,7 +2,7 @@
 //  landmarkUITests.swift
 //  landmarkUITests
 //
-//  Created by Lei Zhao on 10/21/20.
+//  Created by Lei Zhao on 10/22/20.
 //
 //
 
