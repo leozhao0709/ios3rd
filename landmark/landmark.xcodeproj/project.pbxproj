@@ -191,11 +191,14 @@
 /* Begin PBXProject section */
 		37B21CA4F1FC10B45BF3EE5C /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 37B21CD6767BD0A5D7CE842B /* Build configuration list for PBXProject "landmark" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 37B21E85E4E0AE49394E54D7;
@@ -463,8 +466,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -492,6 +494,7 @@
 				37B21FF426051FAE9FE36A2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37B21076AEBA335570350CE2 /* Build configuration list for PBXNativeTarget "landmark" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				37B214119F04B8228EC89B19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37B21CD6767BD0A5D7CE842B /* Build configuration list for PBXProject "landmark" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +521,7 @@
 				37B21846706607D4407F6CFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
