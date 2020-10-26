@@ -13,6 +13,7 @@ struct expensesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Expense())
         }
     }
 

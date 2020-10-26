@@ -10,13 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
 
-  private var list = ["xx", "yy", "zz"]
   @State(initialValue: false) private var showSheet;
+  @EnvironmentObject var expense: Expense
 
   var body: some View {
     NavigationView {
-      List(list, id: \.self) {
-        Text($0)
+      List {
+        ForEach(expense.expenses) { expense in
+          HStack {
+            VStack(alignment: .leading) {
+              Text(expense.name).font(.headline)
+              Text(expense.type)
+            }
+            Spacer()
+            Text(expense.amount)
+          }
+        }
+          .onDelete { indexSet in
+            expense.expenses.remove(atOffsets: indexSet)
+          }
       }
         .navigationBarTitle("费用支出")
         .navigationBarItems(
@@ -31,6 +43,7 @@ struct ContentView: View {
 class ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+      .environmentObject(Expense())
   }
 
   #if DEBUG

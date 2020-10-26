@@ -10,9 +10,8 @@ struct AddView: View {
   @State(initialValue: "") private var name
   @State(initialValue: 0) private var type
   @State(initialValue: "") private var amount
-
-//  @Environment(\.presentationMode) var presentMode
   @Binding var presentMode: Bool
+  @EnvironmentObject var expense: Expense
 
   var body: some View {
     NavigationView {
@@ -28,7 +27,8 @@ struct AddView: View {
       }
         .navigationBarTitle("添加支出")
         .navigationBarItems(trailing: Button(action: {
-//          presentMode.wrappedValue.dismiss()
+          let expenseItem = ExpenseItem(name: name, type: types[type], amount: amount)
+          expense.expenses.append(expenseItem)
           presentMode = false
         }, label: { Text("保存") }))
     }
