@@ -7,10 +7,10 @@
             buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D437AF222548ECF900747303"
-               BuildableName = "MovieMemo.app"
-               BlueprintName = "MovieMemo"
-               ReferencedContainer = "container:MovieMemo.xcodeproj">
+               BlueprintIdentifier = "D437AF61254928A900747303"
+               BuildableName = "moviewMemo.app"
+               BlueprintName = "moviewMemo"
+               ReferencedContainer = "container:moviewMemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -22,10 +22,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D437AF222548ECF900747303"
-            BuildableName = "MovieMemo.app"
-            BlueprintName = "MovieMemo"
-            ReferencedContainer = "container:MovieMemo.xcodeproj">
+            BlueprintIdentifier = "D437AF61254928A900747303"
+            BuildableName = "moviewMemo.app"
+            BlueprintName = "moviewMemo"
+            ReferencedContainer = "container:moviewMemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>

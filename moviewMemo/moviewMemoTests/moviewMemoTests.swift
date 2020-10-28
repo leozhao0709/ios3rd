@@ -1,14 +1,14 @@
 //
-//  MovieMemoTests.swift
-//  MovieMemoTests
+//  moviewMemoTests.swift
+//  moviewMemoTests
 //
 //  Created by Lei Zhao on 10/27/20.
 //
 
 import XCTest
-@testable import MovieMemo
+@testable import moviewMemo
 
-class MovieMemoTests: XCTestCase {
+class moviewMemoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
