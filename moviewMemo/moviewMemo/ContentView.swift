@@ -22,14 +22,16 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(movies) { movie in
-                    HStack {
-                        Text(self.getEmoji(num: movie.rating))
-                            .font(.largeTitle)
-                        VStack(alignment: .leading) {
-                            Text(movie.name ?? "123")
-                                .font(.headline)
-                            Text(movie.type ?? "喜剧")
-                                .foregroundColor(.secondary)
+                    NavigationLink(destination: MovieDetailView()) {
+                        HStack {
+                            Text(self.getEmoji(num: movie.rating))
+                                .font(.largeTitle)
+                            VStack(alignment: .leading) {
+                                Text(movie.name ?? "123")
+                                    .font(.headline)
+                                Text(movie.type ?? "喜剧")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }

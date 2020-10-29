@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37B2177837201FA54415E8C4 /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2110FD0A7DD5D3E7C33B1 /* AddMovieView.swift */; };
+		37B21B25148608CE67C581DE /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21799A545011EBA403696 /* MovieDetailView.swift */; };
 		D437AF66254928A900747303 /* movieMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437AF65254928A900747303 /* movieMemoApp.swift */; };
 		D437AF68254928A900747303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437AF67254928A900747303 /* ContentView.swift */; };
 		D437AF6A254928AB00747303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D437AF69254928AB00747303 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		37B2110FD0A7DD5D3E7C33B1 /* AddMovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieView.swift; sourceTree = "<group>"; };
+		37B21799A545011EBA403696 /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		D437AF62254928A900747303 /* moviewMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviewMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D437AF65254928A900747303 /* movieMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieMemoApp.swift; sourceTree = "<group>"; };
 		D437AF67254928A900747303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D437AF70254928AB00747303 /* moviewMemo.xcdatamodeld */,
 				D437AF6B254928AB00747303 /* Preview Content */,
 				37B2110FD0A7DD5D3E7C33B1 /* AddMovieView.swift */,
+				37B21799A545011EBA403696 /* MovieDetailView.swift */,
 			);
 			path = moviewMemo;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D437AF68254928A900747303 /* ContentView.swift in Sources */,
 				D437AF66254928A900747303 /* movieMemoApp.swift in Sources */,
 				37B2177837201FA54415E8C4 /* AddMovieView.swift in Sources */,
+				37B21B25148608CE67C581DE /* MovieDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
