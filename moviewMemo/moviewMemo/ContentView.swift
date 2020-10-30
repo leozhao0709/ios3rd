@@ -21,8 +21,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(movies) { movie in
-                    NavigationLink(destination: MovieDetailView()) {
+                ForEach(movies, id: \.self) { movie in
+                    NavigationLink(destination: MovieDetailView(movie: movie)) {
                         HStack {
                             Text(self.getEmoji(num: movie.rating))
                                 .font(.largeTitle)

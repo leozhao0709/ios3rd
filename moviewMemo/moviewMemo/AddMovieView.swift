@@ -30,15 +30,7 @@ struct AddMovieView: View {
                     }
                 }
                 Section(header: Text("点评")) {
-                    HStack {
-                        ForEach(1..<6, id: \.self) { num in
-                            Image(systemName: "star.fill")
-                                .foregroundColor(self.rating >= num ? Color.yellow : Color.gray)
-                                .onTapGesture {
-                                    self.rating = self.rating == num ? 0 : num
-                                }.animation(.easeInOut)
-                        }
-                    }
+                    RatingView(rating: $rating)
                     TextEditor(text: $review)
                 }
                 Section {
@@ -47,6 +39,7 @@ struct AddMovieView: View {
                         movie.name = name
                         movie.type = types[typeIndex]
                         movie.rating = Int16(rating)
+                        movie.review = review
 
                         try? viewContext.save()
                         self.showSheet = false

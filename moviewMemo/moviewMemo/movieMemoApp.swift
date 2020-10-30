@@ -18,9 +18,9 @@ struct movieMemoApp: App {
     }
   }
 
-  init() {
-    loadInjectionIIIInDebug()
-  }
+//  init() {
+//    loadInjectionIIIInDebug()
+//  }
 
   func loadInjectionIIIInDebug() {
     #if DEBUG
