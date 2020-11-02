@@ -13,6 +13,7 @@ struct ContentView: View {
 
     @State(initialValue: "") private var name
     @State(initialValue: "") private var phone
+    @State(initialValue: false) private var showSheet
 
     var body: some View {
         NavigationView {
@@ -24,7 +25,7 @@ struct ContentView: View {
                   .font(.title)
                   .keyboardType(.numberPad)
                   .padding([.horizontal, .bottom])
-                Image(uiImage: generateQRCode(code: "\(name) \n \(phone)") ?? UIImage())
+                Image(uiImage: generateQRCode(code: "\(name)\n\(phone)") ?? UIImage())
                   .interpolation(.none)
                   .resizable()
                   .scaledToFit()
@@ -32,7 +33,14 @@ struct ContentView: View {
                 Spacer()
             }
               .navigationBarTitle("My QRcode")
+              .navigationBarItems(trailing: Button("扫一扫") { self.showSheet.toggle() })
         }
+            .sheet(isPresented: $showSheet) { 
+                QrCodeScannerView { codes in
+                    self.showSheet.toggle()
+                    print(".....codes...", codes)
+                }
+            }
     }
 
     func generateQRCode(code: String) -> UIImage? {
