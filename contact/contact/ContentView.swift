@@ -13,25 +13,28 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $tabIndex) {
-            Color.red
-                .tabItem { Text("red")  }
-                .tag(0)
+            CoderView(coderType: .all)
+              .tabItem {
+                  Image(systemName: "person.3")
+                  Text("所有开发者")
+              }
+              .tag(0)
 
-            Color.orange
-              .tabItem { Text("orange")  }
+            CoderView(coderType: .apple)
+              .tabItem {
+                  Image(systemName: "person")
+                  Text("苹果开发者")
+              }
               .tag(1)
 
-            Color.blue
-              .tabItem { Text("blue")  }
+            CoderView(coderType: .android)
+              .tabItem {
+                  Image(systemName: "person")
+                  Text("安卓开发者")
+              }
               .tag(2)
-
-            Color.yellow
-              .tabItem { Text("yellow")  }
-              .tag(3)
         }
-        Button("123") {
-            print("....\(tabIndex)")
-        }
+          .environmentObject(Coders())
     }
 }
 
