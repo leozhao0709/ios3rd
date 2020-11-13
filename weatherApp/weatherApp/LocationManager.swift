@@ -8,12 +8,12 @@ import CoreLocation
 class LocationManager: NSObject, ObservableObject {
 
     private var locationManager: CLLocationManager = CLLocationManager()
-    static var manager: LocationManager?
+    static let sharedInstance: LocationManager = LocationManager()
 
     @Published var locationStatus: CLAuthorizationStatus?
     @Published var lastLocation: CLLocation?
 
-    override init() {
+    private override init() {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -25,13 +25,6 @@ class LocationManager: NSObject, ObservableObject {
         self.locationManager.requestLocation()
 
 //        self.locationManager.startUpdatingLocation()
-    }
-
-    static func sharedInstance() -> LocationManager {
-        guard let manager = self.manager else {
-            return LocationManager()
-        }
-        return manager
     }
 }
 

@@ -3,14 +3,23 @@
 //
 
 import SwiftUI
+import MobileCoreServices
 
 struct ImagePickerView: UIViewControllerRepresentable {
 
     var onPickImage: ((_ image: UIImage) -> Void)?
-    var onCancelPickImage: (() -> Void)?
+    var onPickVideo: ((_ url: URL) -> Void)?
+    var onCancelPick: (() -> Void)?
 
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let imagePickerController = UIImagePickerController()
+//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+//            imagePickerController.sourceType = .camera
+//        } else {
+            imagePickerController.sourceType = .photoLibrary
+//        }
+
+        imagePickerController.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)]
         imagePickerController.delegate = context.coordinator
         return imagePickerController
     }
@@ -30,13 +39,27 @@ struct ImagePickerView: UIViewControllerRepresentable {
         }
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            if let uiImage = info[.originalImage] as? UIImage {
+            guard let mediaType = info[.mediaType] as? String else {
+                return
+            }
+
+            if mediaType == String(kUTTypeImage) {
+                guard let uiImage = info[.originalImage] as? UIImage else{
+                    return
+                }
                 parent.onPickImage?(uiImage)
+            }
+
+            if mediaType == String(kUTTypeMovie) {
+                guard let mediaUrl = info[.mediaURL] as? URL else {
+                    return
+                }
+                parent.onPickVideo?(mediaUrl)
             }
         }
 
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            parent.onCancelPickImage?()
+            parent.onCancelPick?()
         }
     }
 }

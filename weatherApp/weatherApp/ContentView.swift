@@ -14,7 +14,7 @@ import Combine
 struct ContentView: View {
 
     let appid = "ea82790127031a954597502b1c33586c"
-    @ObservedObject var locationManager = LocationManager.sharedInstance()
+    @ObservedObject var locationManager = LocationManager.sharedInstance
     @State private var temp = "0"
     @State private var city = "正在获取位置..."
 

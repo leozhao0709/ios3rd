@@ -8,21 +8,45 @@
 
 import SwiftUI
 import Photos
+import AVKit
 
 struct ContentView: View {
 
     @State(initialValue: false) private var showSheet
     @State private var image: UIImage?
+    @State private var videoUrl: URL?
+    private var player: AVPlayer? {
+        if let url = self.videoUrl {
+            return AVPlayer(url: url)
+        }
+        return nil
+    }
 
     var body: some View {
-        NavigationView {
+         NavigationView {
             VStack {
                 if let image = self.image {
                     Image(uiImage: image)
                       .resizable()
                       .scaledToFit()
                 }
-                Button("select photos") {
+                if let url = self.videoUrl {
+//                    VideoPlayer(player: self.player)
+//                    {
+//                        VStack {
+//                            Text("Watermark")
+//                                .font(.caption)
+//                                .foregroundColor(.white)
+//                                .background(Color.black.opacity(0.7))
+//                              .clipShape(Capsule())
+//                            Spacer()
+//                        }
+//                    }
+//                        .frame(width: 300, height: 400)
+
+                AVPlayerView(mediaUrl: url)
+                }
+                Button("select photos or video") {
                     self.showSheet.toggle()
                 }
             }
@@ -35,17 +59,22 @@ struct ContentView: View {
                               print("save successfully!")
                               return
                           }
-
-                          print("...error...", error?.localizedDescription)
                       })
                   }
               })
               .sheet(isPresented: $showSheet) {
-                  ImagePickerView(onPickImage: {
-                      image in
-                      self.image = image
-                      self.showSheet.toggle()
-                  }, onCancelPickImage: { self.showSheet.toggle() })
+                  ImagePickerView(
+                    onPickImage: {
+                        image in
+                        self.image = image
+                        self.showSheet.toggle()
+                    },
+                    onPickVideo: { url in
+                        self.videoUrl = url
+                        self.showSheet.toggle()
+                    },
+                    onCancelPick: { self.showSheet.toggle() }
+                  )
               }
         }
     }
