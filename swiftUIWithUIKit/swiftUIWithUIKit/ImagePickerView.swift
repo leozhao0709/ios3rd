@@ -16,9 +16,10 @@ struct ImagePickerView: UIViewControllerRepresentable {
 //        if UIImagePickerController.isSourceTypeAvailable(.camera) {
 //            imagePickerController.sourceType = .camera
 //        } else {
-            imagePickerController.sourceType = .photoLibrary
+//            imagePickerController.sourceType = .photoLibrary
 //        }
 
+        imagePickerController.sourceType = .photoLibrary
         imagePickerController.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)]
         imagePickerController.delegate = context.coordinator
         return imagePickerController

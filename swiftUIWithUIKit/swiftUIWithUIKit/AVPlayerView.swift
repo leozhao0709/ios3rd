@@ -3,21 +3,23 @@
 //
 
 import SwiftUI
-import AVFoundation
 import AVKit
+import Combine
 
-struct AVPlayerView: UIViewRepresentable {
+struct AVPlayerView: UIViewControllerRepresentable {
 
-    var mediaUrl: URL
+    var player: AVPlayer?
 
-    func makeUIView(context: Context) -> UIView {
-        let playerController = AVPlayerViewController()
-        playerController.player = AVPlayer(url: mediaUrl)
-        playerController.view.frame = CGRect(x: 10, y: 100, width: 400, height: 400)
-        playerController.player?.play()
-        return playerController.view
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        controller.player = player
+
+        // if we want to customize control, then we should make following to false
+//        controller.showsPlaybackControls = false
+        return controller
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) {
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+        uiViewController.player = player
     }
 }

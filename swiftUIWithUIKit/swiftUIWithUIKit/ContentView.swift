@@ -14,37 +14,25 @@ struct ContentView: View {
 
     @State(initialValue: false) private var showSheet
     @State private var image: UIImage?
-    @State private var videoUrl: URL?
-    private var player: AVPlayer? {
-        if let url = self.videoUrl {
-            return AVPlayer(url: url)
+    @State private var videoUrl: URL? {
+        didSet {
+            self.player = AVPlayer(url: self.videoUrl!)
         }
-        return nil
     }
+    @State private var player: AVPlayer?
 
     var body: some View {
-         NavigationView {
+        NavigationView {
             VStack {
                 if let image = self.image {
                     Image(uiImage: image)
                       .resizable()
                       .scaledToFit()
                 }
-                if let url = self.videoUrl {
-//                    VideoPlayer(player: self.player)
-//                    {
-//                        VStack {
-//                            Text("Watermark")
-//                                .font(.caption)
-//                                .foregroundColor(.white)
-//                                .background(Color.black.opacity(0.7))
-//                              .clipShape(Capsule())
-//                            Spacer()
-//                        }
-//                    }
-//                        .frame(width: 300, height: 400)
 
-                AVPlayerView(mediaUrl: url)
+                if let player = self.player {
+                    AVPlayerView(player: player)
+                      .frame(width: 300, height: 400)
                 }
                 Button("select photos or video") {
                     self.showSheet.toggle()
