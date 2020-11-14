@@ -12,6 +12,8 @@
 		37B219B306C0C015DF9534B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B216B10AFC45A38AA6BD2B /* Assets.xcassets */; };
 		37B21B59ACB81D7445816BA4 /* audioPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2160F82459C7F51703DAF /* audioPlayApp.swift */; };
 		37B21FD1973243F7C1FFBDBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B21C13F7C19D4AC5ED3977 /* Preview Assets.xcassets */; };
+		D4EE0BA1255F1895000538B4 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BA0255F1894000538B4 /* note1.wav */; };
+		D4EE0BA4255F5116000538B4 /* 爸爸去哪儿.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		37B21B770F2C690FC47D6BC9 /* audioPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B21BD2E642AC4FCD96C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		37B21C13F7C19D4AC5ED3977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4EE0BA0255F1894000538B4 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
+		D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "爸爸去哪儿.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 				37B216B10AFC45A38AA6BD2B /* Assets.xcassets */,
 				37B21A3EF2B2CCD3A6A4B787 /* Preview Content */,
 				37B2160F82459C7F51703DAF /* audioPlayApp.swift */,
+				D4EE0BA0255F1894000538B4 /* note1.wav */,
+				D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */,
 				37B218F6DAB6F0CE7DB090C9 /* ContentView.swift */,
 				37B215168D58F340D12A346E /* AudioManager.swift */,
 			);
@@ -97,11 +103,19 @@
 /* Begin PBXProject section */
 		37B21083E435527C8F8E5068 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					37B21539ABAFEEA6F9CCE12F = {
+						DevelopmentTeam = ZQNTYXCS7L;
+					};
+				};
+			};
 			buildConfigurationList = 37B2112B709363ED21CEC0D1 /* Build configuration list for PBXProject "audioPlay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 37B21CADBD38330D89A38A1E;
@@ -119,8 +133,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EE0BA1255F1895000538B4 /* note1.wav in Resources */,
 				37B219B306C0C015DF9534B4 /* Assets.xcassets in Resources */,
 				37B21FD1973243F7C1FFBDBD /* Preview Assets.xcassets in Resources */,
+				D4EE0BA4255F5116000538B4 /* 爸爸去哪儿.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +205,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -201,6 +216,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"audioPlay/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQNTYXCS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = audioPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -218,6 +234,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"audioPlay/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQNTYXCS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = audioPlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -309,6 +326,7 @@
 				37B21148BA89B58976A97995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
