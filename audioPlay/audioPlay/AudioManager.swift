@@ -38,6 +38,7 @@ class AudioManager: NSObject {
             audioPlayer.delegate = self.audioPlayerDelegate
 
             self.audioPlayer = audioPlayer
+            self.audioPlayer?.numberOfLoops = 1
 
             if let audioPlayerUnmutedVolume = self.audioPlayerUnmutedVolume {
                 self.setAudioVolume(volume: audioPlayerUnmutedVolume)
@@ -45,7 +46,7 @@ class AudioManager: NSObject {
                 self.audioPlayerUnmutedVolume = self.audioPlayer?.volume
             }
 
-//            self.audioPlayer?.isMeteringEnabled = true
+            self.audioPlayer?.isMeteringEnabled = true
 
             self.audioPlayer?.play()
         } catch {
@@ -96,8 +97,12 @@ class AudioManager: NSObject {
         self.audioPlayer?.play()
     }
 
+    /* "numberOfLoops" is the number of times that the sound will return to the beginning upon reaching the end.
+   A value of zero means to play the sound just once.
+   A value of one will result in playing the sound twice, and so on..
+   Any negative number will loop indefinitely until stopped.
+   */
     public func setAudioPlayerLoop(num: Int) {
-        print("...set Loop...", num)
         self.audioPlayer?.numberOfLoops = num
     }
 

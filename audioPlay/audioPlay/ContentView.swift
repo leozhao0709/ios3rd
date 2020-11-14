@@ -15,16 +15,14 @@ struct ContentView: View {
     @State private var isPlaying: Bool?
     @State(initialValue: false) private var isMute
     @State(initialValue: 0.5) private var volume
-    @State(initialValue: 1) private var numOfLoop
+    @State(initialValue: 0) private var numOfLoop
 
     var body: some View {
         VStack {
             HStack {
                 Button("Star") {
-                    self.numOfLoop = 1
                     audioManager.startNewAudio(url: url!, onFinishingPlaying: { b in
                         print("....finish....")
-                        self.numOfLoop -= 1
                     })
                     self.isPlaying = true
                 }
