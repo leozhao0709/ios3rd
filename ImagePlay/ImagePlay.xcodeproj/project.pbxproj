@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B2118FA8840D2888F87F50 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B217AAEF4CB45B3C8DCD13 /* CIImageExtension.swift */; };
 		37B2133AAE6C75E4FD677F3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B21CD562223D5177ACBB19 /* Preview Assets.xcassets */; };
+		37B2144600F51163EC3400C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2199E3C13B5A1CEBB886E /* Utils.swift */; };
 		37B214DFF5FD630EE5F856D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21952EE00AE67891C08F8 /* ContentView.swift */; };
 		37B21667BFF880CA1AB27077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B217D7045344A652642720 /* Assets.xcassets */; };
+		37B21952A6EE5B48AF738AFE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B216CCDEA9E94C97504F45 /* UIImageExtension.swift */; };
 		37B21D8B510DBF8852E827B5 /* ImagePlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21EE61CA0BE01F653CA27 /* ImagePlayApp.swift */; };
 		6A723C08EA79DBC5431A45BD /* Pods_ImagePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99692673C0914AE44F13C0B6 /* Pods_ImagePlay.framework */; };
 		D4EE0BA8255FB1AF000538B4 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BA7255FB1AF000538B4 /* giphy.gif */; };
+		D4EE0BB025605B76000538B4 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BAF25605B76000538B4 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37B21182FC37BF7ADC1B945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		37B216CCDEA9E94C97504F45 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		37B217AAEF4CB45B3C8DCD13 /* CIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIImageExtension.swift; sourceTree = "<group>"; };
 		37B217D7045344A652642720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B21952EE00AE67891C08F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37B2199E3C13B5A1CEBB886E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		37B21B9811B6AAFFF7E57FF2 /* ImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B21CD562223D5177ACBB19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37B21EE61CA0BE01F653CA27 /* ImagePlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlayApp.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		99692673C0914AE44F13C0B6 /* Pods_ImagePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImagePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18A8A864D4320227DAEBB45 /* Pods-ImagePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImagePlay.release.xcconfig"; path = "Target Support Files/Pods-ImagePlay/Pods-ImagePlay.release.xcconfig"; sourceTree = "<group>"; };
 		D4EE0BA7255FB1AF000538B4 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		D4EE0BAF25605B76000538B4 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +71,14 @@
 			children = (
 				37B21182FC37BF7ADC1B945B /* Info.plist */,
 				D4EE0BA7255FB1AF000538B4 /* giphy.gif */,
+				D4EE0BAF25605B76000538B4 /* test.jpg */,
 				37B217D7045344A652642720 /* Assets.xcassets */,
 				37B2162A8872BE685A315387 /* Preview Content */,
 				37B21EE61CA0BE01F653CA27 /* ImagePlayApp.swift */,
 				37B21952EE00AE67891C08F8 /* ContentView.swift */,
+				37B216CCDEA9E94C97504F45 /* UIImageExtension.swift */,
+				37B217AAEF4CB45B3C8DCD13 /* CIImageExtension.swift */,
+				37B2199E3C13B5A1CEBB886E /* Utils.swift */,
 			);
 			path = ImagePlay;
 			sourceTree = "<group>";
@@ -93,7 +105,6 @@
 				503DC414F5D104A0519B8BF7 /* Pods-ImagePlay.debug.xcconfig */,
 				D18A8A864D4320227DAEBB45 /* Pods-ImagePlay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +136,11 @@
 		37B210206E27A505F0996AFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					37B21CD0B408B19058B825D3 = {
+						DevelopmentTeam = ZQNTYXCS7L;
+					};
+				};
 			};
 			buildConfigurationList = 37B216203323CBAB955A029D /* Build configuration list for PBXProject "ImagePlay" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -152,6 +168,7 @@
 				37B21667BFF880CA1AB27077 /* Assets.xcassets in Resources */,
 				D4EE0BA8255FB1AF000538B4 /* giphy.gif in Resources */,
 				37B2133AAE6C75E4FD677F3D /* Preview Assets.xcassets in Resources */,
+				D4EE0BB025605B76000538B4 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +226,9 @@
 			files = (
 				37B21D8B510DBF8852E827B5 /* ImagePlayApp.swift in Sources */,
 				37B214DFF5FD630EE5F856D4 /* ContentView.swift in Sources */,
+				37B21952A6EE5B48AF738AFE /* UIImageExtension.swift in Sources */,
+				37B2118FA8840D2888F87F50 /* CIImageExtension.swift in Sources */,
+				37B2144600F51163EC3400C5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"ImagePlay/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQNTYXCS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImagePlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -355,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"ImagePlay/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQNTYXCS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImagePlay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
