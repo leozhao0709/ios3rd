@@ -1,0 +1,6 @@
+framework module SwiftMusings {
+  umbrella header "SwiftMusings-umbrella.h"
+
+  export *
+  module * { export * }
+}

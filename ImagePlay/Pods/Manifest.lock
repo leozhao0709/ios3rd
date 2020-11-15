@@ -4,19 +4,31 @@ PODS:
   - SDWebImage/Core (5.9.5)
   - SDWebImageSwiftUI (1.5.0):
     - SDWebImage (~> 5.7)
+  - SwiftMusings (0.1.0)
 
 DEPENDENCIES:
   - SDWebImageSwiftUI
+  - SwiftMusings (from `https://github.com/leozhao0709/SwiftMusings.git`)
 
 SPEC REPOS:
   trunk:
     - SDWebImage
     - SDWebImageSwiftUI
 
+EXTERNAL SOURCES:
+  SwiftMusings:
+    :git: https://github.com/leozhao0709/SwiftMusings.git
+
+CHECKOUT OPTIONS:
+  SwiftMusings:
+    :commit: bac57aa81e4d36177890c325470f8697d01a6762
+    :git: https://github.com/leozhao0709/SwiftMusings.git
+
 SPEC CHECKSUMS:
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  SwiftMusings: 7fd5daae7ae1e260d7d002c37223a918b8bb9b60
 
-PODFILE CHECKSUM: df726165b4483f13d7858547c44b8f5789041a20
+PODFILE CHECKSUM: f1c672b39972f15bfc281bf1a532506b7b31dda6
 
 COCOAPODS: 1.10.0

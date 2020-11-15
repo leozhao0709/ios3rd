@@ -1,0 +1,24 @@
+{
+  "name": "SwiftMusings",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftMusings.",
+  "swift_versions": "5.3",
+  "description": "SwiftMusings is an userful Extension for swift project to use",
+  "homepage": "https://github.com/leozhao0709/SwiftMusings",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "leo.zhao.real@gmail.com": "lei.zhao@coupa.com"
+  },
+  "source": {
+    "git": "https://github.com/leozhao0709/SwiftMusings.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "SwiftMusings/Classes/**/*",
+  "swift_version": "5.3"
+}

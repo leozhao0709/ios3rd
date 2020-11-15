@@ -3,20 +3,21 @@
 //
 
 import Foundation
-import AVFoundation
+import AVKit
 import UIKit
 import AudioToolbox
 
-class AudioManager: NSObject {
+@available(macCatalyst 13.0, *)
+public class AudioManager {
     private var audioPlayer: AVAudioPlayer?
     private var audioPlayerDelegate: AudioPlayerDelegate?
     private var recorder: AVAudioRecorder?
     private let session = AVAudioSession.sharedInstance()
     private var audioPlayerUnmutedVolume: Float?
 
-    static let sharedInstance = AudioManager()
+    public static let sharedInstance = AudioManager()
 
-    private override init() {
+    private init() {
     }
 
     public func startNewAudio(
@@ -30,6 +31,7 @@ class AudioManager: NSObject {
 
             // we need this line to show the high volume
             try AVAudioSession.sharedInstance().setCategory(.playback)
+
 
             let audioPlayer = try AVAudioPlayer(contentsOf: url)
 
@@ -133,7 +135,11 @@ class AudioManager: NSObject {
       soundId: UInt32? = 1104,
       onComplete: (() -> Void)? = nil
     ) {
-        AudioServicesPlayAlertSoundWithCompletion(soundId!, onComplete)
+        if #available(iOS 9.0, *) {
+            AudioServicesPlayAlertSoundWithCompletion(soundId!, onComplete)
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     // sound id can be found here: http://iphonedevwiki.net/index.php/AudioServices or https://github.com/TUNER88/iOSSystemSoundsLibrary
@@ -145,6 +151,7 @@ class AudioManager: NSObject {
 }
 
 // record
+@available(macCatalyst 13.0, *)
 extension AudioManager {
 
     public func startRecord(
@@ -182,6 +189,7 @@ extension AudioManager {
 }
 
 // custom type
+@available(macCatalyst 13.0, *)
 extension AudioManager {
     struct DeviceNotSupportError: LocalizedError {
         var errorDescription: String? {
@@ -198,12 +206,12 @@ extension AudioManager {
         }
     }
 
+    @available(macCatalyst 13.0, *)
     class AudioPlayerDelegate: NSObject, AVAudioPlayerDelegate {
 
         var onFinishingPlaying: ((_ flag: Bool) -> Void)?
 
         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-            print("...audioPlayerDidFinishPlaying...")
             onFinishingPlaying?(flag)
         }
 

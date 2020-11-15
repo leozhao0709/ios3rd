@@ -1,20 +1,24 @@
 //
-// Created by Lei Zhao on 11/14/20.
+//  CoreImageExtension.swift
+//
+//  Created by Lei Zhao on 9/18/16.
+//  Copyright © 2016 Lei Zhao. All rights reserved.
 //
 
 import UIKit
 
+@available(macCatalyst 13.0, *)
 extension CIImage {
-
+    
     /// resize CIImage
     ///
     /// - parameter size: desired CIImage size
     ///
     /// - returns: resized CIImage
-    func resizeCIImage(size: CGSize)->CIImage {
+    public func resizeCIImage(size: CGSize)->CIImage {
         let extent = self.extent.integral
         let scale = min(size.width/extent.width, size.height/extent.height)
-
+        
         let width = extent.width * scale
         let height = extent.height * scale
         let colorSpace = CGColorSpaceCreateDeviceGray()
@@ -25,7 +29,7 @@ extension CIImage {
         bitmapRef!.interpolationQuality = .none
         bitmapRef!.scaleBy(x: scale, y: scale)
         bitmapRef?.draw(bitmapImage!, in: extent)
-
+        
         let scaledImage = bitmapRef!.makeImage()
         return CIImage(cgImage: scaledImage!)
     }

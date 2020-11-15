@@ -8,10 +8,11 @@ import Accelerate
 
 //refer: https://github.com/melvitax/AFImageHelper
 
-enum UIImageContentMode {
+public enum UIImageContentMode {
     case scaleToFill, scaleAspectFit, scaleAspectFill
 }
 
+@available(macCatalyst 13.0, *)
 extension UIImage {
 
     /**
@@ -34,7 +35,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    convenience init?(color: UIColor, size: CGSize = CGSize(width: 10, height: 10)) {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 10, height: 10)) {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         let context = UIGraphicsGetCurrentContext()
@@ -53,7 +54,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    convenience init?(gradientColors: [UIColor], size: CGSize = CGSize(width: 10, height: 10)) {
+    public convenience init?(gradientColors: [UIColor], size: CGSize = CGSize(width: 10, height: 10)) {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -66,7 +67,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
     }
 
-    convenience init?(QRCodeString: String, size: CGSize) {
+    public convenience init?(QRCodeString: String, size: CGSize) {
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setDefaults()
         let data = QRCodeString.data(using: String.Encoding.utf8)
@@ -87,7 +88,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func applyGradientColors(_ gradientColors: [UIColor], blendMode: CGBlendMode = CGBlendMode.normal) -> UIImage {
+    public func applyGradientColors(_ gradientColors: [UIColor], blendMode: CGBlendMode = CGBlendMode.normal) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context = UIGraphicsGetCurrentContext()
         context?.translateBy(x: 0, y: size.height)
@@ -122,7 +123,7 @@ extension UIImage {
      - Returns A new image
      */
 
-    func addText(_ text: String, font: UIFont = UIFont.systemFont(ofSize: 11), textColor: UIColor = UIColor.orange, position: CGPoint = CGPoint(x: 0, y: 0)) -> UIImage {
+    public func addText(_ text: String, font: UIFont = UIFont.systemFont(ofSize: 11), textColor: UIColor = UIColor.orange, position: CGPoint = CGPoint(x: 0, y: 0)) -> UIImage {
 
         assert(self.size.width > position.x && self.size.height > position.y, "text must in image")
 
@@ -154,7 +155,7 @@ extension UIImage {
      - returns: a new image
      */
 
-    func addTextInCenter(_ text: String, font: UIFont = UIFont.systemFont(ofSize: 11), textColor: UIColor = UIColor.orange) -> UIImage {
+    public func addTextInCenter(_ text: String, font: UIFont = UIFont.systemFont(ofSize: 11), textColor: UIColor = UIColor.orange) -> UIImage {
 
         let textFontAttributes = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: textColor]
 
@@ -171,7 +172,7 @@ extension UIImage {
     // MARK: add an image to an Image (waterMark)
 
 
-    func addImage(_ image: UIImage, position: CGPoint = CGPoint(x: 0, y: 0)) -> UIImage {
+    public func addImage(_ image: UIImage, position: CGPoint = CGPoint(x: 0, y: 0)) -> UIImage {
 
         assert(self.size.width > position.x && self.size.height > position.y, "added image must in original image")
 
@@ -254,7 +255,7 @@ extension UIImage {
     /**
      Returns true if the image has an alpha layer.
      */
-    func hasAlpha() -> Bool {
+    public func hasAlpha() -> Bool {
         let alpha = self.cgImage!.alphaInfo
         switch alpha {
         case .first, .last, .premultipliedFirst, .premultipliedLast:
@@ -268,7 +269,7 @@ extension UIImage {
     /**
      Returns a copy of the given image, adding an alpha channel if it doesn't already have one.
      */
-    func applyAlpha() -> UIImage? {
+    public func applyAlpha() -> UIImage? {
         if hasAlpha() {
             return self
         }
@@ -297,12 +298,12 @@ extension UIImage {
 
      - Returns A new image
      */
-    func crop(_ bounds: CGRect) -> UIImage {
+    public func crop(_ bounds: CGRect) -> UIImage {
         UIImage(cgImage: (self.cgImage?.cropping(to: bounds)!)!,
           scale: self.scale, orientation: self.imageOrientation)
     }
 
-    func cropToSquare() -> UIImage {
+    public func cropToSquare() -> UIImage {
         let size = CGSize(width: self.size.width * self.scale, height: self.size.height * self.scale)
         let shortest = min(size.width, size.height)
         let left: CGFloat = size.width > shortest ? (size.width - shortest) / 2 : 0
@@ -313,7 +314,7 @@ extension UIImage {
     }
 
     // rotate
-    func rotate(by angle: Angle) -> UIImage? {
+    public func rotate(by angle: Angle) -> UIImage? {
         let width = self.size.width * self.scale
         let height = self.size.height * self.scale
 
@@ -340,7 +341,7 @@ extension UIImage {
         let data = bmContext.data
         var src = vImage_Buffer(data: data, height: UInt(height), width: UInt(width), rowBytes: Int(bytesPerRow))
         var dest = vImage_Buffer(data: data, height: UInt(height), width: UInt(width), rowBytes: Int(bytesPerRow))
-        var bgColor: Array<UInt8> = [0,0,0,0]
+        var bgColor: Array<UInt8> = [0, 0, 0, 0]
         vImageRotate_ARGB8888(&src, &dest, nil, Float(-angle.radians), &bgColor, UInt32(kvImageBackgroundColorFill))
         let rotateImageRef = bmContext.makeImage()
         guard let cgRef = rotateImageRef else {
@@ -361,7 +362,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func resize(_ size: CGSize, contentMode: UIImageContentMode = .scaleToFill) -> UIImage? {
+    public func resize(_ size: CGSize, contentMode: UIImageContentMode = .scaleToFill) -> UIImage? {
         let horizontalRatio = size.width / self.size.width;
         let verticalRatio = size.height / self.size.height;
         var ratio: CGFloat!
@@ -412,7 +413,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func roundCorners(_ cornerRadius: CGFloat) -> UIImage? {
+    public func roundCorners(_ cornerRadius: CGFloat) -> UIImage? {
         // If the image does not have an alpha layer, add one
         let imageWithAlpha = applyAlpha()
         if imageWithAlpha == nil {
@@ -463,7 +464,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func roundCorners(_ cornerRadius: CGFloat, border: CGFloat, color: UIColor) -> UIImage? {
+    public func roundCorners(_ cornerRadius: CGFloat, border: CGFloat, color: UIColor) -> UIImage? {
         roundCorners(cornerRadius)?.applyBorder(border, color: color)
     }
 
@@ -472,7 +473,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func circleImage() -> UIImage? {
+    public func circleImage() -> UIImage? {
         let squareCurrentImage = self.cropToSquare()
         let radius = min(squareCurrentImage.size.width, squareCurrentImage.size.height) / 2
         return squareCurrentImage.roundCorners(radius)
@@ -486,7 +487,7 @@ extension UIImage {
 
      - Returns UIImage?
      */
-    func circleImageWithBorder(border: CGFloat, color: UIColor) -> UIImage? {
+    public func circleImageWithBorder(border: CGFloat, color: UIColor) -> UIImage? {
         let squareCurrentImage = self.cropToSquare()
         let radius = min(squareCurrentImage.size.width, squareCurrentImage.size.height) / 2
         return squareCurrentImage.roundCorners(radius, border: border, color: color)
@@ -503,7 +504,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    func applyBorder(_ border: CGFloat, color: UIColor) -> UIImage? {
+    public func applyBorder(_ border: CGFloat, color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let width = self.cgImage?.width
         let height = self.cgImage?.height
@@ -531,7 +532,7 @@ extension UIImage {
 
      - Returns New image or nil
      */
-    func applyLightEffect() -> UIImage? {
+    public func applyLightEffect() -> UIImage? {
         applyBlur(30, tintColor: UIColor(white: 1.0, alpha: 0.3), saturationDeltaFactor: 1.8)
     }
 
@@ -540,7 +541,7 @@ extension UIImage {
 
      - Returns New image or nil
      */
-    func applyExtraLightEffect() -> UIImage? {
+    public func applyExtraLightEffect() -> UIImage? {
         applyBlur(20, tintColor: UIColor(white: 0.97, alpha: 0.82), saturationDeltaFactor: 1.8)
     }
 
@@ -549,7 +550,7 @@ extension UIImage {
 
      - Returns New image or nil
      */
-    func applyDarkEffect() -> UIImage? {
+    public func applyDarkEffect() -> UIImage? {
         applyBlur(20, tintColor: UIColor(white: 0.11, alpha: 0.73), saturationDeltaFactor: 1.8)
     }
 
@@ -560,7 +561,7 @@ extension UIImage {
 
      - Returns New image or nil
      */
-    func applyTintEffect(_ tintColor: UIColor) -> UIImage? {
+    public func applyTintEffect(_ tintColor: UIColor) -> UIImage? {
         let effectColorAlpha: CGFloat = 0.6
         var effectColor = tintColor
         let componentCount = tintColor.cgColor.numberOfComponents
@@ -591,7 +592,7 @@ extension UIImage {
 
      - Returns New image or nil
      */
-    func applyBlur(_ blurRadius: CGFloat, tintColor: UIColor?, saturationDeltaFactor: CGFloat, maskImage: UIImage? = nil) -> UIImage? {
+    public func applyBlur(_ blurRadius: CGFloat, tintColor: UIColor?, saturationDeltaFactor: CGFloat, maskImage: UIImage? = nil) -> UIImage? {
         guard size.width > 0 && size.height > 0 && cgImage != nil else {
             return nil
         }
@@ -727,7 +728,7 @@ extension UIImage {
 
      - Returns A new image
      */
-    class func image(
+    class public func image(
       fromURL url: String,
       shouldCacheImage: Bool? = true,
       placeholder: UIImage? = nil,

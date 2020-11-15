@@ -7,4 +7,5 @@ target 'ImagePlay' do
 
   # Pods for ImagePlay
   pod 'SDWebImageSwiftUI'
+  pod 'SwiftMusings', :git => 'https://github.com/leozhao0709/SwiftMusings.git'
 end

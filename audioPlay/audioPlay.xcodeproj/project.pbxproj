@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		37B212249784090E544F7AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B218F6DAB6F0CE7DB090C9 /* ContentView.swift */; };
-		37B21465729BE913E0917B0C /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B215168D58F340D12A346E /* AudioManager.swift */; };
 		37B219B306C0C015DF9534B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B216B10AFC45A38AA6BD2B /* Assets.xcassets */; };
 		37B21B59ACB81D7445816BA4 /* audioPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2160F82459C7F51703DAF /* audioPlayApp.swift */; };
 		37B21FD1973243F7C1FFBDBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B21C13F7C19D4AC5ED3977 /* Preview Assets.xcassets */; };
+		C269365DCD1DF77E87A8B4A7 /* Pods_audioPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DCF0DC9F256FAC09352F31 /* Pods_audioPlay.framework */; };
 		D4EE0BA1255F1895000538B4 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BA0255F1894000538B4 /* note1.wav */; };
 		D4EE0BA4255F5116000538B4 /* 爸爸去哪儿.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37B215168D58F340D12A346E /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		215D146E5FFB69387346EDE2 /* Pods-audioPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audioPlay.release.xcconfig"; path = "Target Support Files/Pods-audioPlay/Pods-audioPlay.release.xcconfig"; sourceTree = "<group>"; };
 		37B2160F82459C7F51703DAF /* audioPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioPlayApp.swift; sourceTree = "<group>"; };
 		37B216B10AFC45A38AA6BD2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B218F6DAB6F0CE7DB090C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37B21B770F2C690FC47D6BC9 /* audioPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B21BD2E642AC4FCD96C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		37B21C13F7C19D4AC5ED3977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49DCF0DC9F256FAC09352F31 /* Pods_audioPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_audioPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA380C06DE7A47E694B544A5 /* Pods-audioPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audioPlay.debug.xcconfig"; path = "Target Support Files/Pods-audioPlay/Pods-audioPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		D4EE0BA0255F1894000538B4 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
 		D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "爸爸去哪儿.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,12 +35,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C269365DCD1DF77E87A8B4A7 /* Pods_audioPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23165C6A10C4C70AF40B5790 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA380C06DE7A47E694B544A5 /* Pods-audioPlay.debug.xcconfig */,
+				215D146E5FFB69387346EDE2 /* Pods-audioPlay.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		37B21633A2DE2C0C25529C02 /* audioPlay */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,7 +62,6 @@
 				D4EE0BA0255F1894000538B4 /* note1.wav */,
 				D4EE0BA3255F5116000538B4 /* 爸爸去哪儿.mp3 */,
 				37B218F6DAB6F0CE7DB090C9 /* ContentView.swift */,
-				37B215168D58F340D12A346E /* AudioManager.swift */,
 			);
 			path = audioPlay;
 			sourceTree = "<group>";
@@ -67,6 +79,8 @@
 			children = (
 				37B21D26D86642D1EEB77839 /* Products */,
 				37B21633A2DE2C0C25529C02 /* audioPlay */,
+				23165C6A10C4C70AF40B5790 /* Pods */,
+				DF5C68680C1D0051F1D75AF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +92,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DF5C68680C1D0051F1D75AF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49DCF0DC9F256FAC09352F31 /* Pods_audioPlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37B213E5E2D35985AF741CF5 /* Build configuration list for PBXNativeTarget "audioPlay" */;
 			buildPhases = (
+				52DA2E5A32992220DDDAB4E6 /* [CP] Check Pods Manifest.lock */,
 				37B21816B4E31BBDD05B1732 /* Sources */,
 				37B2120579A52F861150C1C6 /* Frameworks */,
 				37B21799CC8FD791E0DAE41F /* Resources */,
+				B1CDDCE11135FD73061D3943 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +166,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52DA2E5A32992220DDDAB4E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-audioPlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1CDDCE11135FD73061D3943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-audioPlay/Pods-audioPlay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftMusings/SwiftMusings.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMusings.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-audioPlay/Pods-audioPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37B21816B4E31BBDD05B1732 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,7 +216,6 @@
 			files = (
 				37B21B59ACB81D7445816BA4 /* audioPlayApp.swift in Sources */,
 				37B212249784090E544F7AC5 /* ContentView.swift in Sources */,
-				37B21465729BE913E0917B0C /* AudioManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +278,7 @@
 		};
 		37B21148BA89B58976A97995 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215D146E5FFB69387346EDE2 /* Pods-audioPlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -230,6 +297,7 @@
 		};
 		37B21187BBA57EF2FB9B1AD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA380C06DE7A47E694B544A5 /* Pods-audioPlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

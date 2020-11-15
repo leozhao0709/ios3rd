@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E1528AFD608A1A82F6C878C45D0BE7 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */; };
+		055336630B8580FC382FDDDC8C487904 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */; };
+		0C86A4979AF1DDF41F5463D285F6FC4F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */; };
+		264F8CA3C5D597F50F9771FDEE3998A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2C4EDC5120D0A6F653108C0AAB6C1233 /* Pods-audioPlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DFA50AFC2AC9C9321C9E9D266EDBDC /* Pods-audioPlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51A4F0C1EEE53021A597812543425ED7 /* SwiftMusings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		681DA931328BF0A6A01BB4DC7A0BD445 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */; };
+		70479FF16F78530D3FB73A4C78715FC0 /* Pods-audioPlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4950C885D9D846BE45D57F0915484C7 /* Pods-audioPlay-dummy.m */; };
+		7B036ADF12CA1D6592361431F842DBA4 /* SwiftMusings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */; };
+		880E744C075045FDC63F967446CF51DD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */; };
+		8D9861DBA5751E21AF32BE3A2E62E67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		ACDA8179277AA612A5A80965E7613129 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */; };
+		C6F03B8515755BD59387A0AEBD6E3D2F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */; };
+		D07656603FC6DEA1BC942706FAEAEB6B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */; };
+		E0978891AAE600C482EEF2A7EDAA2D2F /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */; };
+		E81662C60139D6B563CD9DAA756A6E04 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */; };
+		EDB0BE40BE76DA21E6BF5176100B8904 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */; };
+		F2AB8D7FA033FA37E30746B5669C6565 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A188D678DDF615D9E7AB5753F2B9331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76B2DC247CC73A762B71FAF828F9DC;
+			remoteInfo = SwiftMusings;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B3A1E27F9D6097FC758EF27A25A40C1 /* Pods-audioPlay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-audioPlay.modulemap"; sourceTree = "<group>"; };
+		1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.debug.xcconfig; sourceTree = "<group>"; };
+		328B29587BD13DBE047461CAFF403459 /* Pods-audioPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-audioPlay.debug.xcconfig"; sourceTree = "<group>"; };
+		339F0CBC77BD9FC6B0C19B06C656FF2E /* SwiftMusings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMusings.modulemap; sourceTree = "<group>"; };
+		35CF5E4EE0FC73A37BD0A2A0E6CAA672 /* SwiftMusings-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-prefix.pch"; sourceTree = "<group>"; };
+		36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMusings-dummy.m"; sourceTree = "<group>"; };
+		3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = SwiftMusings/Classes/UIImageViewExtension.swift; sourceTree = "<group>"; };
+		4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = SwiftMusings/Classes/UIButtonExtension.swift; sourceTree = "<group>"; };
+		6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-umbrella.h"; sourceTree = "<group>"; };
+		72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = SwiftMusings/Classes/CIImageExtension.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarItemExtension.swift; path = SwiftMusings/Classes/UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		778DFA961735EC65EE7B550BD7EA9BD7 /* Pods-audioPlay-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-audioPlay-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79AA90F29C67B44F70ED9EA3ECCAEDA1 /* Pods-audioPlay-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-audioPlay-frameworks.sh"; sourceTree = "<group>"; };
+		7ECB56EDC717E8148DE009D6CEB7E334 /* Pods-audioPlay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-audioPlay-Info.plist"; sourceTree = "<group>"; };
+		8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = SwiftMusings/Classes/AudioManager.swift; sourceTree = "<group>"; };
+		8EBBD0D93586246C6A15EA73435F6593 /* Pods-audioPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-audioPlay.release.xcconfig"; sourceTree = "<group>"; };
+		90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtension.swift; path = SwiftMusings/Classes/UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		991E06336A326445133AFC9AD3F1BA5D /* Pods-audioPlay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-audioPlay-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAC60F3066B841084C4DA7F043B721EC /* SwiftMusings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMusings.framework; path = SwiftMusings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = SwiftMusings/Classes/TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		B4950C885D9D846BE45D57F0915484C7 /* Pods-audioPlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-audioPlay-dummy.m"; sourceTree = "<group>"; };
+		BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = SwiftMusings/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
+		CBFB9764F669D1ABFCC2FAA5E5376D13 /* SwiftMusings-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMusings-Info.plist"; sourceTree = "<group>"; };
+		D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.release.xcconfig; sourceTree = "<group>"; };
+		DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftMusings/Classes/StringExtension.swift; sourceTree = "<group>"; };
+		DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = SwiftMusings/Classes/FileManagerExtension.swift; sourceTree = "<group>"; };
+		E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftMusings/Classes/Utils.swift; sourceTree = "<group>"; };
+		E9DFA50AFC2AC9C9321C9E9D266EDBDC /* Pods-audioPlay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-audioPlay-umbrella.h"; sourceTree = "<group>"; };
+		F483DBCA088A29EE15E048FCC76A5074 /* Pods_audioPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_audioPlay.framework; path = "Pods-audioPlay.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SwiftMusings/Classes/UIImageExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		735248E3A941C7A81D28E845488045EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9861DBA5751E21AF32BE3A2E62E67B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC3E8709CA700814C7ED0B181884529B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264F8CA3C5D597F50F9771FDEE3998A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AF9BB16605914A395F738104B6CD83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F483DBCA088A29EE15E048FCC76A5074 /* Pods_audioPlay.framework */,
+				AAC60F3066B841084C4DA7F043B721EC /* SwiftMusings.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		297B412236B4E452FD7613373FC75697 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0F1AE5B3D137D8B0234F682B11C2FFF /* Pods-audioPlay */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2A4A5170E1A7CFEAAB35427CDB57FA4E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				339F0CBC77BD9FC6B0C19B06C656FF2E /* SwiftMusings.modulemap */,
+				36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */,
+				CBFB9764F669D1ABFCC2FAA5E5376D13 /* SwiftMusings-Info.plist */,
+				35CF5E4EE0FC73A37BD0A2A0E6CAA672 /* SwiftMusings-prefix.pch */,
+				6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */,
+				1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */,
+				D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftMusings";
+			sourceTree = "<group>";
+		};
+		2EFF1A57DD6BA07FA8AFD7649A68FF5B /* SwiftMusings */ = {
+			isa = PBXGroup;
+			children = (
+				8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */,
+				72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */,
+				DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */,
+				DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */,
+				B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */,
+				90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */,
+				4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */,
+				FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */,
+				3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */,
+				75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */,
+				BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */,
+				E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */,
+				2A4A5170E1A7CFEAAB35427CDB57FA4E /* Support Files */,
+			);
+			name = SwiftMusings;
+			path = SwiftMusings;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A186823E7C5469B0981EA0898522B22E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EFF1A57DD6BA07FA8AFD7649A68FF5B /* SwiftMusings */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A186823E7C5469B0981EA0898522B22E /* Pods */,
+				14AF9BB16605914A395F738104B6CD83 /* Products */,
+				297B412236B4E452FD7613373FC75697 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F1AE5B3D137D8B0234F682B11C2FFF /* Pods-audioPlay */ = {
+			isa = PBXGroup;
+			children = (
+				0B3A1E27F9D6097FC758EF27A25A40C1 /* Pods-audioPlay.modulemap */,
+				778DFA961735EC65EE7B550BD7EA9BD7 /* Pods-audioPlay-acknowledgements.markdown */,
+				991E06336A326445133AFC9AD3F1BA5D /* Pods-audioPlay-acknowledgements.plist */,
+				B4950C885D9D846BE45D57F0915484C7 /* Pods-audioPlay-dummy.m */,
+				79AA90F29C67B44F70ED9EA3ECCAEDA1 /* Pods-audioPlay-frameworks.sh */,
+				7ECB56EDC717E8148DE009D6CEB7E334 /* Pods-audioPlay-Info.plist */,
+				E9DFA50AFC2AC9C9321C9E9D266EDBDC /* Pods-audioPlay-umbrella.h */,
+				328B29587BD13DBE047461CAFF403459 /* Pods-audioPlay.debug.xcconfig */,
+				8EBBD0D93586246C6A15EA73435F6593 /* Pods-audioPlay.release.xcconfig */,
+			);
+			name = "Pods-audioPlay";
+			path = "Target Support Files/Pods-audioPlay";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		38487BD4FB5A22FD7E64306054AF2C75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A4F0C1EEE53021A597812543425ED7 /* SwiftMusings-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8620630A356FF12983AF1881C74F3809 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4EDC5120D0A6F653108C0AAB6C1233 /* Pods-audioPlay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		297893E3CD4D94E2786FF9971DE85DF0 /* Pods-audioPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F83A274F8D118FF9DA85B8A4275C03A /* Build configuration list for PBXNativeTarget "Pods-audioPlay" */;
+			buildPhases = (
+				8620630A356FF12983AF1881C74F3809 /* Headers */,
+				EDB9B22A2A992B8369492E1BF87093D8 /* Sources */,
+				AC3E8709CA700814C7ED0B181884529B /* Frameworks */,
+				EB7FA32490B73408B9759D94D88F826C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DB29B6827AD55272472BD15C23E4478 /* PBXTargetDependency */,
+			);
+			name = "Pods-audioPlay";
+			productName = "Pods-audioPlay";
+			productReference = F483DBCA088A29EE15E048FCC76A5074 /* Pods_audioPlay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B0D2B760BC4F479A9E8A2D628E7CEB1 /* Build configuration list for PBXNativeTarget "SwiftMusings" */;
+			buildPhases = (
+				38487BD4FB5A22FD7E64306054AF2C75 /* Headers */,
+				F4759BA13F21A0DE6EFF23C5E34C9253 /* Sources */,
+				735248E3A941C7A81D28E845488045EE /* Frameworks */,
+				7483481D6B3B625F8381A87219F5DCE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMusings;
+			productName = SwiftMusings;
+			productReference = AAC60F3066B841084C4DA7F043B721EC /* SwiftMusings.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 14AF9BB16605914A395F738104B6CD83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				297893E3CD4D94E2786FF9971DE85DF0 /* Pods-audioPlay */,
+				AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7483481D6B3B625F8381A87219F5DCE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7FA32490B73408B9759D94D88F826C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB9B22A2A992B8369492E1BF87093D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70479FF16F78530D3FB73A4C78715FC0 /* Pods-audioPlay-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4759BA13F21A0DE6EFF23C5E34C9253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				055336630B8580FC382FDDDC8C487904 /* AudioManager.swift in Sources */,
+				04E1528AFD608A1A82F6C878C45D0BE7 /* CIImageExtension.swift in Sources */,
+				681DA931328BF0A6A01BB4DC7A0BD445 /* FileManagerExtension.swift in Sources */,
+				880E744C075045FDC63F967446CF51DD /* StringExtension.swift in Sources */,
+				7B036ADF12CA1D6592361431F842DBA4 /* SwiftMusings-dummy.m in Sources */,
+				EDB0BE40BE76DA21E6BF5176100B8904 /* TimeIntervalExtension.swift in Sources */,
+				F2AB8D7FA033FA37E30746B5669C6565 /* UIBarButtonItemExtension.swift in Sources */,
+				C6F03B8515755BD59387A0AEBD6E3D2F /* UIButtonExtension.swift in Sources */,
+				D07656603FC6DEA1BC942706FAEAEB6B /* UIImageExtension.swift in Sources */,
+				ACDA8179277AA612A5A80965E7613129 /* UIImageViewExtension.swift in Sources */,
+				E0978891AAE600C482EEF2A7EDAA2D2F /* UITabBarItemExtension.swift in Sources */,
+				0C86A4979AF1DDF41F5463D285F6FC4F /* UIViewExtension.swift in Sources */,
+				E81662C60139D6B563CD9DAA756A6E04 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DB29B6827AD55272472BD15C23E4478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftMusings;
+			target = AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */;
+			targetProxy = 6A188D678DDF615D9E7AB5753F2B9331 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		104189D3E875965D2E2B9C9CEA72731A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMusings;
+				PRODUCT_NAME = SwiftMusings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2FFAE651A28248780301F3AB8C50CBE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBBD0D93586246C6A15EA73435F6593 /* Pods-audioPlay.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-audioPlay/Pods-audioPlay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-audioPlay/Pods-audioPlay.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		36BF50835A99AD0FD80BDC5F144BEE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 328B29587BD13DBE047461CAFF403459 /* Pods-audioPlay.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-audioPlay/Pods-audioPlay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-audioPlay/Pods-audioPlay.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		735A1086FE978870722EF8739D7557C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMusings;
+				PRODUCT_NAME = SwiftMusings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F83A274F8D118FF9DA85B8A4275C03A /* Build configuration list for PBXNativeTarget "Pods-audioPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36BF50835A99AD0FD80BDC5F144BEE1A /* Debug */,
+				2FFAE651A28248780301F3AB8C50CBE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B0D2B760BC4F479A9E8A2D628E7CEB1 /* Build configuration list for PBXNativeTarget "SwiftMusings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				104189D3E875965D2E2B9C9CEA72731A /* Debug */,
+				735A1086FE978870722EF8739D7557C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
