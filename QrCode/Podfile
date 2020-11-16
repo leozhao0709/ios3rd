@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'QrCode' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for QrCode
+  pod 'SwiftMusings', :git => 'https://github.com/leozhao0709/SwiftMusings.git' 
+
+  target 'QrCodeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'QrCodeUITests' do
+    # Pods for testing
+  end
+
+end

@@ -8,11 +8,12 @@
 
 import SwiftUI
 import CoreImage.CIFilterBuiltins
+import SwiftMusings
 
 struct ContentView: View {
 
-    @State(initialValue: "") private var name
-    @State(initialValue: "") private var phone
+    @State(initialValue: "123") private var name
+    @State(initialValue: "456") private var phone
     @State(initialValue: false) private var showSheet
 
     var body: some View {
@@ -25,22 +26,21 @@ struct ContentView: View {
                   .font(.title)
                   .keyboardType(.numberPad)
                   .padding([.horizontal, .bottom])
-                Image(uiImage: generateQRCode(code: "\(name)\n\(phone)") ?? UIImage())
-                  .interpolation(.none)
-                  .resizable()
-                  .scaledToFit()
-                  .frame(width: 200)
+                Image(uiImage: UIImage(QRCodeString: "\(name)\n\(phone)") ?? UIImage())
+                Text(UIImage(QRCodeString: "\(name)\n\(phone)")!.extractQRCode()![0])
                 Spacer()
             }
               .navigationBarTitle("My QRcode")
-              .navigationBarItems(trailing: Button("扫一扫") { self.showSheet.toggle() })
+              .navigationBarItems(trailing: Button("扫一扫") {
+                  self.showSheet.toggle()
+              })
         }
-            .sheet(isPresented: $showSheet) { 
-                QrCodeScannerView { codes in
-                    self.showSheet.toggle()
-                    print(".....codes...", codes)
-                }
-            }
+          .sheet(isPresented: $showSheet) {
+              QrCodeScannerView { codes in
+                  self.showSheet.toggle()
+                  print(".....codes...", codes)
+              }
+          }
     }
 
     func generateQRCode(code: String) -> UIImage? {
@@ -70,10 +70,14 @@ struct ContentView: View {
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil)
 
         //2. 获取CIImage
-        guard let ciImage = CIImage(image: qrCodeImage) else { return nil }
+        guard let ciImage = CIImage(image: qrCodeImage) else {
+            return nil
+        }
 
         //3. 识别二维码
-        guard let features = detector?.features(in: ciImage) else { return nil }
+        guard let features = detector?.features(in: ciImage) else {
+            return nil
+        }
 
         //4. 遍历数组, 获取信息
         return features.compactMap { feature in
