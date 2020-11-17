@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftMusings:
-    :commit: a29c5884176b6925c1c33193fe27481294a5b43a
+    :commit: 5bffcc5901319587eaacfd7087b41d9f665dc3b6
     :git: https://github.com/leozhao0709/SwiftMusings.git
 
 SPEC CHECKSUMS:
   SwiftMusings: 0bbcad1bb401952ff7ea29a2338944e65e371bf8
 
-PODFILE CHECKSUM: 66cf52481da113b74656481123660acd9a6e59a9
+PODFILE CHECKSUM: 05981a115eeeecf0835d2f1d8adf712bfcf7d616
 
 COCOAPODS: 1.10.0

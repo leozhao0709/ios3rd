@@ -13,20 +13,9 @@ public enum UIImageContentMode {
     case scaleToFill, scaleAspectFit, scaleAspectFill
 }
 
+// Convenience constructor
 @available(macCatalyst 13.0, *)
 extension UIImage {
-
-    /**
-     A singleton shared NSURL cache used for images from URL
-     */
-    static var shared: NSCache<AnyObject, AnyObject>! {
-        struct StaticSharedCache {
-            static var shared: NSCache<AnyObject, AnyObject>? = NSCache()
-        }
-
-        return StaticSharedCache.shared!
-    }
-
     // MARK: Image from solid color
     /**
      Creates a new solid color image.
@@ -85,6 +74,155 @@ extension UIImage {
         }
 
         self.init(cgImage: cgImage)
+    }
+
+    public convenience init?(BarcodeString: String, size: CGSize = CGSize(width: 300, height: 100)) {
+        let filter = CIFilter.code128BarcodeGenerator()
+        let context = CIContext()
+
+        let data = BarcodeString.data(using: .utf8)
+        filter.setValue(data, forKey: "inputMessage")
+
+        let outputImage = filter.outputImage
+
+        guard let ciImage = outputImage?.resizeCIImage(size: size),
+              let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
+          else {
+            return nil
+        }
+
+        self.init(cgImage: cgImage)
+    }
+
+    public convenience init?(pixels: [UInt8], width: CGFloat) {
+        let componentsPerPixel: CGFloat = 4 // 4 pixels each
+        let bitsPerComponent: CGFloat = 8
+        let bytesPerRow = width * 4
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let alphaInfo = CGImageAlphaInfo.premultipliedLast
+        let height: CGFloat = CGFloat(pixels.count) / componentsPerPixel / width
+
+        var pixelsCopy = Array(pixels)
+        let data = UnsafeMutablePointer(mutating: &pixelsCopy)
+
+        guard let bmContext = CGContext(
+          data: data,
+          width: Int(width),
+          height: Int(height),
+          bitsPerComponent: Int(bitsPerComponent),
+          bytesPerRow: Int(bytesPerRow),
+          space: colorSpace,
+          bitmapInfo: CGBitmapInfo(rawValue: 0).rawValue | alphaInfo.rawValue
+        ) else {
+            return nil
+        }
+
+        // create the image:
+        guard let cgImageRef = bmContext.makeImage() else {
+            return nil
+        }
+        self.init(cgImage: cgImageRef)
+    }
+
+    // MARK: Image from UIView
+    /**
+     Creates an image from a UIView.
+
+     - Parameter fromView: The source view.
+
+     - Returns A new image
+     */
+    public convenience init?(fromView view: UIView) {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0)
+        //view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        self.init(cgImage: (UIGraphicsGetImageFromCurrentImageContext()?.cgImage!)!)
+        UIGraphicsEndImageContext()
+    }
+
+    // MARK: Image with Radial Gradient
+    // Radial background originally from: http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_shadings/dq_shadings.html
+    /**
+     Creates a radial gradient.
+
+     - Parameter startColor: The start color
+     - Parameter endColor: The end color
+     - Parameter radialGradientCenter: The gradient center (default:0.5,0.5).
+     - Parameter radius: Radius size (default: 0.5)
+     - Parameter size: Image size (default: 100x100)
+
+     - Returns A new image
+     */
+    public convenience init?(startColor: UIColor, endColor: UIColor, radialGradientCenter: CGPoint = CGPoint(x: 0.5, y: 0.5), radius: Float = 0.5, size: CGSize = CGSize(width: 100, height: 100)) {
+
+        // Init
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
+
+        let num_locations: Int = 2
+        let locations: [CGFloat] = [0.0, 1.0] as [CGFloat]
+
+        let startComponents = startColor.cgColor.components!
+        let endComponents = endColor.cgColor.components!
+
+        let components: [CGFloat] = [startComponents[0], startComponents[1], startComponents[2], startComponents[3], endComponents[0], endComponents[1], endComponents[2], endComponents[3]]
+
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: components, locations: locations, count: num_locations)
+
+        // Normalize the 0-1 ranged inputs to the width of the image
+        let aCenter = CGPoint(x: radialGradientCenter.x * size.width, y: radialGradientCenter.y * size.height)
+        let aRadius = CGFloat(min(size.width, size.height)) * CGFloat(radius)
+
+        // Draw it
+        UIGraphicsGetCurrentContext()?.drawRadialGradient(gradient!, startCenter: aCenter, startRadius: 0, endCenter: aCenter, endRadius: aRadius, options: CGGradientDrawingOptions.drawsAfterEndLocation)
+        self.init(cgImage: (UIGraphicsGetImageFromCurrentImageContext()?.cgImage!)!)
+        // Clean up
+        UIGraphicsEndImageContext()
+    }
+}
+
+@available(macCatalyst 13.0, *)
+extension UIImage {
+
+    /**
+     A singleton shared NSURL cache used for images from URL
+     */
+    static var shared: NSCache<AnyObject, AnyObject>! {
+        struct StaticSharedCache {
+            static var shared: NSCache<AnyObject, AnyObject>? = NSCache()
+        }
+
+        return StaticSharedCache.shared!
+    }
+
+    // return [r, g, b, a]: range [0-255, 0-255, 0-255, 0 - 1]
+    public func getPixel(atRelativePoint point: CGPoint) -> [UInt8]? {
+        guard point.x < size.width && point.y < size.height else {
+            printLog("point(\(point.x), \(point.y) is not in image(\(self.size.width), \(self.size.height)")
+            return nil
+        }
+
+        guard let pixelData = self.cgImage?.dataProvider?.data else {
+            return nil
+        }
+
+        let componentsPerPixel: CGFloat = 4; // 4 pixels each
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        let pixelInfo: Int = Int((size.width * point.y + point.x) * componentsPerPixel * scale * scale)
+
+        return [data[pixelInfo], data[pixelInfo + 1], data[pixelInfo + 2], data[pixelInfo + 3]]
+    }
+
+    // // [r, g, b, a, r, g, b, a...] for each pixels
+    public func getPixels() -> [UInt8]? {
+        guard let pixelData = self.cgImage?.dataProvider?.data else {
+            return nil
+        }
+
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        let componentsPerPixel: CGFloat = 4 // 4 pixels each
+        let buffer = UnsafeBufferPointer(start: data, count: Int(size.width * size.height * componentsPerPixel * scale * scale));
+        return Array(buffer)
     }
 
 
@@ -200,64 +338,6 @@ extension UIImage {
         return newImage!
     }
 
-
-    // MARK: Image from UIView
-    /**
-     Creates an image from a UIView.
-
-     - Parameter fromView: The source view.
-
-     - Returns A new image
-     */
-    convenience init?(fromView view: UIView) {
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0)
-        //view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
-        view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        self.init(cgImage: (UIGraphicsGetImageFromCurrentImageContext()?.cgImage!)!)
-        UIGraphicsEndImageContext()
-    }
-
-
-    // MARK: Image with Radial Gradient
-    // Radial background originally from: http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_shadings/dq_shadings.html
-    /**
-     Creates a radial gradient.
-
-     - Parameter startColor: The start color
-     - Parameter endColor: The end color
-     - Parameter radialGradientCenter: The gradient center (default:0.5,0.5).
-     - Parameter radius: Radius size (default: 0.5)
-     - Parameter size: Image size (default: 100x100)
-
-     - Returns A new image
-     */
-    convenience init?(startColor: UIColor, endColor: UIColor, radialGradientCenter: CGPoint = CGPoint(x: 0.5, y: 0.5), radius: Float = 0.5, size: CGSize = CGSize(width: 100, height: 100)) {
-
-        // Init
-        UIGraphicsBeginImageContextWithOptions(size, true, 0)
-
-        let num_locations: Int = 2
-        let locations: [CGFloat] = [0.0, 1.0] as [CGFloat]
-
-        let startComponents = startColor.cgColor.components!
-        let endComponents = endColor.cgColor.components!
-
-        let components: [CGFloat] = [startComponents[0], startComponents[1], startComponents[2], startComponents[3], endComponents[0], endComponents[1], endComponents[2], endComponents[3]]
-
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: components, locations: locations, count: num_locations)
-
-        // Normalize the 0-1 ranged inputs to the width of the image
-        let aCenter = CGPoint(x: radialGradientCenter.x * size.width, y: radialGradientCenter.y * size.height)
-        let aRadius = CGFloat(min(size.width, size.height)) * CGFloat(radius)
-
-        // Draw it
-        UIGraphicsGetCurrentContext()?.drawRadialGradient(gradient!, startCenter: aCenter, startRadius: 0, endCenter: aCenter, endRadius: aRadius, options: CGGradientDrawingOptions.drawsAfterEndLocation)
-        self.init(cgImage: (UIGraphicsGetImageFromCurrentImageContext()?.cgImage!)!)
-        // Clean up
-        UIGraphicsEndImageContext()
-    }
-
     // MARK: Alpha
 
     /**
@@ -327,7 +407,7 @@ extension UIImage {
         let height = self.size.height * self.scale
 
         let bytesPerRow = width * 4 // image bytes per prw
-        let alphaInfo = CGImageAlphaInfo.premultipliedFirst
+        let alphaInfo = CGImageAlphaInfo.premultipliedLast
         guard let bmContext = CGContext(
           data: nil,
           width: Int(width),
@@ -722,7 +802,7 @@ extension UIImage {
 
         return outputImage
     }
-
+    
     public func extractQRCode() -> [String]? {
         //1. 创建过滤器
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil)
@@ -761,7 +841,7 @@ extension UIImage {
       shouldCacheImage: Bool? = true,
       placeholder: UIImage? = nil,
       onSuccess: ((_ image: UIImage?) -> Void)? = nil,
-      onError: ((_ err: Error) -> Void)? = nil
+      onError: ((_ err: Error) -> Void)?
     ) -> UIImage? {
         // From Cache
         if shouldCacheImage != nil && shouldCacheImage! {

@@ -9,6 +9,8 @@
 import SwiftUI
 import Photos
 import AVKit
+import SwiftMusings
+import MobileCoreServices
 
 struct ContentView: View {
 
@@ -20,6 +22,10 @@ struct ContentView: View {
         }
     }
     @State private var player: AVPlayer?
+    @State private var showAlert: Bool = false
+
+    let permissionManager = PermissionManager.sharedInstance
+    let imagePickSourceType: UIImagePickerController.SourceType = .photoLibrary
 
     var body: some View {
         NavigationView {
@@ -31,11 +37,21 @@ struct ContentView: View {
                 }
 
                 if let player = self.player {
-                    AVPlayerView(player: player)
+                    AVPlayerView(player: player, showsPlaybackControls: true)
                       .frame(width: 300, height: 400)
                 }
                 Button("select photos or video") {
-                    self.showSheet.toggle()
+                    if imagePickSourceType == .camera {
+                        permissionManager.checkCameraPermission(onGranted: {
+                            printLog("....granted....")
+                            self.showSheet.toggle()
+                        }) { status in
+                            printLog("....Not granted....\(status.rawValue)")
+                            self.showSheet.toggle()
+                        }
+                    } else {
+                        self.showSheet.toggle()
+                    }
                 }
             }
               .navigationBarItems(trailing: Button("Save") {
@@ -50,8 +66,19 @@ struct ContentView: View {
                       })
                   }
               })
+              .alert(isPresented: $showAlert) {
+                  Alert(
+                    title: Text("Need Camera Access"),
+                    message: Text("Camera access is required to make full use of this app."),
+                    primaryButton: .default(Text("allow camera")) {
+                        permissionManager.openSettings { b in printLog("...openSettings...\(b)") }
+                    },
+                    secondaryButton: .default(Text("Cancel")){}
+                  )
+              }
               .sheet(isPresented: $showSheet) {
                   ImagePickerView(
+                    sourceType: imagePickSourceType,
                     onPickImage: {
                         image in
                         self.image = image
@@ -62,7 +89,9 @@ struct ContentView: View {
                         self.showSheet.toggle()
                     },
                     onCancelPick: { self.showSheet.toggle() }
-                  )
+                  ) { error in
+                      printLog("...error...\(error.localizedDescription)")
+                  }
               }
         }
     }

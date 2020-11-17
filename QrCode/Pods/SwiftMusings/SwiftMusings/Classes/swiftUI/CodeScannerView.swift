@@ -5,39 +5,46 @@
 import SwiftUI
 import AVFoundation
 
-struct QrCodeScannerView: UIViewControllerRepresentable {
+// This can scan [.qr, .code128, .code39, .code93, .code39Mod43, .ean8, .ean13, .upce, .pdf417, .aztec] code
+public struct CodeScannerView: UIViewControllerRepresentable {
 
-    var onGetQrCodes: ((_ codes: [String]) -> Void)?
+    var onGetCodes: ((_ codes: [String]) -> Void)?
+    var onError: ((_ error: Error) -> Void)?
 
-    func makeCoordinator() -> Coordinator {
+    public init(onGetCodes: (([String]) -> ())? = nil, onError: ((Error) -> ())?) {
+        self.onGetCodes = onGetCodes
+        self.onError = onError
+    }
+
+    public func makeCoordinator() -> Coordinator {
         Coordinator()
     }
 
-    func makeUIViewController(context: Context) -> Coordinator {
+    public func makeUIViewController(context: Context) -> Coordinator {
         let controller = Coordinator()
         controller.parentController = self
         return controller
     }
 
-    func updateUIViewController(_ uiViewController: Coordinator, context: Context) {
+    public func updateUIViewController(_ uiViewController: Coordinator, context: Context) {
     }
 
-    class Coordinator: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    public class Coordinator: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         let session = AVCaptureSession()
         weak var previewLayer: AVCaptureVideoPreviewLayer?
-        var parentController: QrCodeScannerView?
+        var parentController: CodeScannerView?
 
-        override func viewWillAppear(_ animated: Bool) {
+        public override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
 
             //1. 获取输入设备
             guard let inputDevice = AVCaptureDevice.default(for: .video) else {
-                print("Device not support for QRcode scan")
+                parentController?.onError?(CustomError("Device not support for code scanning"))
                 return
             }
 
             guard let input = try? AVCaptureDeviceInput(device: inputDevice) else {
-                print("Device not support for QRcode scan")
+                parentController?.onError?(CustomError("Device not support for code scanning"))
                 return
             }
 
@@ -73,14 +80,14 @@ struct QrCodeScannerView: UIViewControllerRepresentable {
             session.startRunning()
         }
 
-        override func viewDidDisappear(_ animated: Bool) {
+        public override func viewDidDisappear(_ animated: Bool) {
             super.viewDidDisappear(animated)
             self.previewLayer?.removeFromSuperlayer()
             self.session.stopRunning()
         }
 
         // delegate
-        func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
             // 以震动的形式告知用户扫描成功
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
 
@@ -97,7 +104,7 @@ struct QrCodeScannerView: UIViewControllerRepresentable {
                 }
             }
 
-            self.parentController?.onGetQrCodes?(resultArr)
+            self.parentController?.onGetCodes?(resultArr)
         }
     }
 

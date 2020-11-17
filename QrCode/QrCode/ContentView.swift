@@ -28,6 +28,7 @@ struct ContentView: View {
                   .padding([.horizontal, .bottom])
                 Image(uiImage: UIImage(QRCodeString: "\(name)\n\(phone)") ?? UIImage())
                 Text(UIImage(QRCodeString: "\(name)\n\(phone)")!.extractQRCode()![0])
+                Image(uiImage: UIImage(BarcodeString: "\(name)\n\(phone)") ?? UIImage())
                 Spacer()
             }
               .navigationBarTitle("My QRcode")
@@ -36,10 +37,10 @@ struct ContentView: View {
               })
         }
           .sheet(isPresented: $showSheet) {
-              QrCodeScannerView { codes in
+              CodeScannerView(onGetCodes: { codes in
                   self.showSheet.toggle()
                   print(".....codes...", codes)
-              }
+              }, onError: nil)
           }
     }
 

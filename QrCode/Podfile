@@ -6,7 +6,7 @@ target 'QrCode' do
   use_frameworks!
 
   # Pods for QrCode
-  pod 'SwiftMusings', :git => 'https://github.com/leozhao0709/SwiftMusings.git' 
+  pod 'SwiftMusings', :git => 'https://github.com/leozhao0709/SwiftMusings.git'
 
   target 'QrCodeTests' do
     inherit! :search_paths

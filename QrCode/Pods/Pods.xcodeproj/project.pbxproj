@@ -8,52 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		000F425FD353039B9C3E266E6FFB02F3 /* Pods-QrCodeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9E5D6CD9DC51D144318384A5E468BB /* Pods-QrCodeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04E1528AFD608A1A82F6C878C45D0BE7 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */; };
-		055336630B8580FC382FDDDC8C487904 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */; };
+		09A0CCA40E4DE777E9CB85CDD601A176 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DABAFBD3E878005054AADB9E652892 /* Utils.swift */; };
 		0B567D795384DF55B4A965B4FB78393C /* Pods-QrCode-QrCodeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 277ABB82AB7ABCA419A151DD29184062 /* Pods-QrCode-QrCodeUITests-dummy.m */; };
-		0C86A4979AF1DDF41F5463D285F6FC4F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */; };
+		12FBE1C38DCF6B6065EED9DF2EF55756 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A221327EFB91068068CB3956631DA3E /* UIImageExtension.swift */; };
+		1365BA960406E6C9A902E104D5518113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		175D7F251375D582D5078575C41BB00C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F513A38FD56E9B0F9B63DB6F39DF206 /* UIButtonExtension.swift */; };
+		27C3E822B3CB19350A02874961477AD4 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422601827543E7B2121F12C6E1821152 /* FileManagerExtension.swift */; };
 		2B4771E92218F0367A3E32AF942CC666 /* Pods-QrCode-QrCodeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C229126754817D2792A4623C77A6FD6D /* Pods-QrCode-QrCodeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BDF0CE94C97E9A4350DDFE9A095EF18 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31EAFF11E040DDF6DBAD37785B1B5A /* AVPlayerView.swift */; };
+		393361BB45645C93A0BCEF2FDC62D60B /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A350BB15EE88DFACF93B201F5DEE09B /* TimeIntervalExtension.swift */; };
 		4E2A6FC5A38BCC134219BC9E454EE3BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		51A4F0C1EEE53021A597812543425ED7 /* SwiftMusings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50DBEB63A1524D98B25FB2B5AC5AE5C9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871A4894DCC5D220EFBDCC9FAD31EAA /* StringExtension.swift */; };
+		54B2FD87D70B5ADB97B690C01076E51A /* SwiftMusings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD78C07110C96BCF7491341820DFE79A /* SwiftMusings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B141D561E65C985F0E7C4641E3E3BEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		681DA931328BF0A6A01BB4DC7A0BD445 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */; };
 		6C2D4B3EDA90E562CC6EB018471B6007 /* Pods-QrCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EFFCB2B53CC18D9DAEA1E250628BF /* Pods-QrCode-dummy.m */; };
 		72019F27935E8878398D8E60D3E8BED7 /* Pods-QrCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6F3E1C13145F663D60B6E9FC0BDE60 /* Pods-QrCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B036ADF12CA1D6592361431F842DBA4 /* SwiftMusings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */; };
-		880E744C075045FDC63F967446CF51DD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */; };
-		8D9861DBA5751E21AF32BE3A2E62E67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7820D01E941239309D0EA11100A91C15 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5E48F686CCAA6C3E0EC5E957E7664 /* CodeScannerView.swift */; };
+		9406E3D89C875D478535416A0F379650 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DDD0DE0CA1F105D9B8B19F17BE67A6 /* CustomError.swift */; };
 		9F399FBEC298B4718AA9D03431735554 /* Pods-QrCodeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE01653416DB08789DFC057C3E64B6 /* Pods-QrCodeTests-dummy.m */; };
-		ACDA8179277AA612A5A80965E7613129 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */; };
+		9F91019C4D6A57DCDD189BC051E184FE /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501CCB4E27A8EFEC5F2619098264574 /* UITabBarItemExtension.swift */; };
 		AED6E3F35FD6EA0CD093E7D39E685163 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C6F03B8515755BD59387A0AEBD6E3D2F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */; };
-		D07656603FC6DEA1BC942706FAEAEB6B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */; };
-		E0978891AAE600C482EEF2A7EDAA2D2F /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */; };
-		E81662C60139D6B563CD9DAA756A6E04 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */; };
-		EDB0BE40BE76DA21E6BF5176100B8904 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */; };
-		F2AB8D7FA033FA37E30746B5669C6565 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */; };
+		BC6C20171D4A4E0B6F0854A133307EA0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB9D52F5403C84F89FD5921C7ABB2 /* AudioManager.swift */; };
+		D82E3A6AA60F00DD478FC83EC2E5C070 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7B51B41F465BE7FF394AD6CCA5CF22 /* UIViewExtension.swift */; };
+		E6EBB50231EFE63FAC7E3A1DB5CEAFDE /* SwiftMusings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E825BED18D95B24FE1FEA1C237A5C2F /* SwiftMusings-dummy.m */; };
+		F64C083DD35D781C9148D47D88034DCA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E719A2E5B12B438896B923EC88AEE /* UIImageViewExtension.swift */; };
+		FB267001BAFE1256884338BDEBE6AF25 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B468423472BD4FA739A77AF1CEA81A4 /* UIBarButtonItemExtension.swift */; };
+		FD151170513A27C7E5B1A59777E95161 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F37509BA2CAB62CCCC2E2022912B3 /* CIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9165B9F40A02D54E65AC82DF5FC582A8 /* PBXContainerItemProxy */ = {
+		C1F0F398418C6BF7EA1D4D38C5590655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76B2DC247CC73A762B71FAF828F9DC;
+			remoteInfo = SwiftMusings;
+		};
+		C47DDEF38FC0D4E739A8E9CC09CBCB5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76B2DC247CC73A762B71FAF828F9DC;
+			remoteInfo = SwiftMusings;
+		};
+		FF337173F572DA7FE34105D572A49B6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0A524CA86FE331F75B250DB474589FFC;
 			remoteInfo = "Pods-QrCode";
-		};
-		A41BA1A8CD576FDD54EE326884E64B9C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF76B2DC247CC73A762B71FAF828F9DC;
-			remoteInfo = SwiftMusings;
-		};
-		BFBF0036727612FC96FD164E40505E5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF76B2DC247CC73A762B71FAF828F9DC;
-			remoteInfo = SwiftMusings;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,70 +64,73 @@
 		0447C62ED65A60067790D5CE5BF415B6 /* Pods-QrCode-QrCodeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QrCode-QrCodeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		081C2D381A830EA2837B930D0FBA5013 /* Pods-QrCode-QrCodeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCode-QrCodeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		08D296849C5FD9A382061EDAE26F8F77 /* Pods_QrCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_QrCode.framework; path = "Pods-QrCode.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A350BB15EE88DFACF93B201F5DEE09B /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = SwiftMusings/Classes/extensions/TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		0D513F0CCA99E5E3A01632160FC60788 /* SwiftMusings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.debug.xcconfig; sourceTree = "<group>"; };
+		0E31EAFF11E040DDF6DBAD37785B1B5A /* AVPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVPlayerView.swift; path = SwiftMusings/Classes/swiftUI/AVPlayerView.swift; sourceTree = "<group>"; };
 		14CD17FB36C9708161EE3CBB99064711 /* Pods-QrCode-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCode-Info.plist"; sourceTree = "<group>"; };
 		19FE01653416DB08789DFC057C3E64B6 /* Pods-QrCodeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QrCodeTests-dummy.m"; sourceTree = "<group>"; };
-		1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.debug.xcconfig; sourceTree = "<group>"; };
 		1CA54C35939AF8FF81F665CCDFD32CD2 /* Pods-QrCodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		277ABB82AB7ABCA419A151DD29184062 /* Pods-QrCode-QrCodeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QrCode-QrCodeUITests-dummy.m"; sourceTree = "<group>"; };
+		2871A4894DCC5D220EFBDCC9FAD31EAA /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftMusings/Classes/extensions/StringExtension.swift; sourceTree = "<group>"; };
+		29D733EB42523B960E5D29A48397E468 /* SwiftMusings-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-prefix.pch"; sourceTree = "<group>"; };
+		2F513A38FD56E9B0F9B63DB6F39DF206 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = SwiftMusings/Classes/extensions/UIButtonExtension.swift; sourceTree = "<group>"; };
 		3210FA94AC565F1EB2ADCDA07F05DD9F /* Pods_QrCode_QrCodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_QrCode_QrCodeUITests.framework; path = "Pods-QrCode-QrCodeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		339F0CBC77BD9FC6B0C19B06C656FF2E /* SwiftMusings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMusings.modulemap; sourceTree = "<group>"; };
 		33ABF0BBC6544F3BBB1A9ACFDA0FEDC2 /* Pods-QrCodeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QrCodeTests.modulemap"; sourceTree = "<group>"; };
-		35CF5E4EE0FC73A37BD0A2A0E6CAA672 /* SwiftMusings-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-prefix.pch"; sourceTree = "<group>"; };
-		36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMusings-dummy.m"; sourceTree = "<group>"; };
-		3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = SwiftMusings/Classes/UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3B468423472BD4FA739A77AF1CEA81A4 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtension.swift; path = SwiftMusings/Classes/extensions/UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		3E825BED18D95B24FE1FEA1C237A5C2F /* SwiftMusings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMusings-dummy.m"; sourceTree = "<group>"; };
+		422601827543E7B2121F12C6E1821152 /* FileManagerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = SwiftMusings/Classes/extensions/FileManagerExtension.swift; sourceTree = "<group>"; };
 		4782E0B2CAADA38DAEEFD964F20B6570 /* Pods-QrCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCode.debug.xcconfig"; sourceTree = "<group>"; };
-		4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = SwiftMusings/Classes/UIButtonExtension.swift; sourceTree = "<group>"; };
 		548205B18D6FACF785B8335598AFF4F5 /* Pods-QrCodeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCodeTests-Info.plist"; sourceTree = "<group>"; };
 		576EFFCB2B53CC18D9DAEA1E250628BF /* Pods-QrCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QrCode-dummy.m"; sourceTree = "<group>"; };
 		59D0952B37D7A9B607DE2335BCB5697E /* Pods-QrCodeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QrCodeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-umbrella.h"; sourceTree = "<group>"; };
+		6A221327EFB91068068CB3956631DA3E /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SwiftMusings/Classes/extensions/UIImageExtension.swift; sourceTree = "<group>"; };
 		6BB0DA3E92EAB1437C2DE67B8D65A019 /* Pods-QrCode-QrCodeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QrCode-QrCodeUITests.modulemap"; sourceTree = "<group>"; };
-		72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = SwiftMusings/Classes/CIImageExtension.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarItemExtension.swift; path = SwiftMusings/Classes/UITabBarItemExtension.swift; sourceTree = "<group>"; };
-		8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = SwiftMusings/Classes/AudioManager.swift; sourceTree = "<group>"; };
+		742E719A2E5B12B438896B923EC88AEE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = SwiftMusings/Classes/extensions/UIImageViewExtension.swift; sourceTree = "<group>"; };
+		7CC5E48F686CCAA6C3E0EC5E957E7664 /* CodeScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeScannerView.swift; path = SwiftMusings/Classes/swiftUI/CodeScannerView.swift; sourceTree = "<group>"; };
+		876CBE310F54C931FCA37AF071A7D804 /* SwiftMusings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMusings.modulemap; sourceTree = "<group>"; };
 		8FF9F92763F80AB0FA26120FD070F1C8 /* Pods-QrCode-QrCodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCode-QrCodeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtension.swift; path = SwiftMusings/Classes/UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		957B8DF1470AEB3CCC5898CE547AC3FD /* SwiftMusings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.release.xcconfig; sourceTree = "<group>"; };
 		9C9E5D6CD9DC51D144318384A5E468BB /* Pods-QrCodeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QrCodeTests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A154E77CA22889C6007DB47B06ADBA8E /* Pods-QrCode-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCode-acknowledgements.plist"; sourceTree = "<group>"; };
 		A1A1C3511313E2423EDCBA3014F11755 /* Pods-QrCode-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QrCode-frameworks.sh"; sourceTree = "<group>"; };
+		A501CCB4E27A8EFEC5F2619098264574 /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarItemExtension.swift; path = SwiftMusings/Classes/extensions/UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		A5DABAFBD3E878005054AADB9E652892 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftMusings/Classes/utils/Utils.swift; sourceTree = "<group>"; };
 		AAC60F3066B841084C4DA7F043B721EC /* SwiftMusings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMusings.framework; path = SwiftMusings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = SwiftMusings/Classes/TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		AD78C07110C96BCF7491341820DFE79A /* SwiftMusings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-umbrella.h"; sourceTree = "<group>"; };
 		B80A6886FACAF60D05735818938755D5 /* Pods-QrCode-QrCodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCode-QrCodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = SwiftMusings/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
+		BA9F37509BA2CAB62CCCC2E2022912B3 /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = SwiftMusings/Classes/extensions/CIImageExtension.swift; sourceTree = "<group>"; };
 		C229126754817D2792A4623C77A6FD6D /* Pods-QrCode-QrCodeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QrCode-QrCodeUITests-umbrella.h"; sourceTree = "<group>"; };
 		CA8F8F4C95903D01999D4F8CCE27C1C2 /* Pods-QrCode-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QrCode-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CBFB9764F669D1ABFCC2FAA5E5376D13 /* SwiftMusings-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMusings-Info.plist"; sourceTree = "<group>"; };
+		CD7B51B41F465BE7FF394AD6CCA5CF22 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = SwiftMusings/Classes/extensions/UIViewExtension.swift; sourceTree = "<group>"; };
+		D10264FDCE4FF8B2DFD6B4266C66593A /* SwiftMusings-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMusings-Info.plist"; sourceTree = "<group>"; };
 		D46EBB644C5D13B1AE904F35ED62F29D /* Pods_QrCodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_QrCodeTests.framework; path = "Pods-QrCodeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.release.xcconfig; sourceTree = "<group>"; };
 		DA6F3E1C13145F663D60B6E9FC0BDE60 /* Pods-QrCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QrCode-umbrella.h"; sourceTree = "<group>"; };
-		DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftMusings/Classes/StringExtension.swift; sourceTree = "<group>"; };
 		DB079902AF80144448E917B85070FE96 /* Pods-QrCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = SwiftMusings/Classes/FileManagerExtension.swift; sourceTree = "<group>"; };
 		DCCF99DEE198BC0C389395E44BDFBC19 /* Pods-QrCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QrCode.modulemap"; sourceTree = "<group>"; };
-		E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftMusings/Classes/Utils.swift; sourceTree = "<group>"; };
+		E8DDD0DE0CA1F105D9B8B19F17BE67A6 /* CustomError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomError.swift; path = SwiftMusings/Classes/utils/CustomError.swift; sourceTree = "<group>"; };
+		EE4DB9D52F5403C84F89FD5921C7ABB2 /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = SwiftMusings/Classes/utils/AudioManager.swift; sourceTree = "<group>"; };
 		EFC5958D861B93C9AE4C9B90F724BEA6 /* Pods-QrCode-QrCodeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCode-QrCodeUITests-Info.plist"; sourceTree = "<group>"; };
 		EFF469801F8E00D6ABC2C8B50A3FBF7E /* Pods-QrCodeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QrCodeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F4DE0A7E1EA67403566D2BEEC37FB371 /* Pods-QrCode-QrCodeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QrCode-QrCodeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F6D7676846C89EEBD5784124B720B35B /* Pods-QrCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QrCode.release.xcconfig"; sourceTree = "<group>"; };
-		FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SwiftMusings/Classes/UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E6C8AD62BEA4959ADC5839E7F3A8974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1365BA960406E6C9A902E104D5518113 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DFB8F32E2922B0DCA5A9B298B5F4B73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AED6E3F35FD6EA0CD093E7D39E685163 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		735248E3A941C7A81D28E845488045EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D9861DBA5751E21AF32BE3A2E62E67B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,40 +180,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A4A5170E1A7CFEAAB35427CDB57FA4E /* Support Files */ = {
+		3BA78E7AC764FFF2F23993E75F093035 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				339F0CBC77BD9FC6B0C19B06C656FF2E /* SwiftMusings.modulemap */,
-				36308F45FA8644BA22BDFF696F65B167 /* SwiftMusings-dummy.m */,
-				CBFB9764F669D1ABFCC2FAA5E5376D13 /* SwiftMusings-Info.plist */,
-				35CF5E4EE0FC73A37BD0A2A0E6CAA672 /* SwiftMusings-prefix.pch */,
-				6686D9650815B320F35A2BF1E13D238D /* SwiftMusings-umbrella.h */,
-				1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */,
-				D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */,
+				9590E41A29658B02C572479D8C64176F /* SwiftMusings */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CC6314490B1061713B26629C5BFE4D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				876CBE310F54C931FCA37AF071A7D804 /* SwiftMusings.modulemap */,
+				3E825BED18D95B24FE1FEA1C237A5C2F /* SwiftMusings-dummy.m */,
+				D10264FDCE4FF8B2DFD6B4266C66593A /* SwiftMusings-Info.plist */,
+				29D733EB42523B960E5D29A48397E468 /* SwiftMusings-prefix.pch */,
+				AD78C07110C96BCF7491341820DFE79A /* SwiftMusings-umbrella.h */,
+				0D513F0CCA99E5E3A01632160FC60788 /* SwiftMusings.debug.xcconfig */,
+				957B8DF1470AEB3CCC5898CE547AC3FD /* SwiftMusings.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftMusings";
-			sourceTree = "<group>";
-		};
-		2EFF1A57DD6BA07FA8AFD7649A68FF5B /* SwiftMusings */ = {
-			isa = PBXGroup;
-			children = (
-				8897039F899FDFF49D39C2AABCAD23C2 /* AudioManager.swift */,
-				72F8FDD63E3C4014791BB7E2A7B14760 /* CIImageExtension.swift */,
-				DC9A60FCF0505F86B8080E6A09269218 /* FileManagerExtension.swift */,
-				DA71E7E8BD7E5E5B60DDE14BCFEA69C4 /* StringExtension.swift */,
-				B47F8D906814AE79A8FBF3557A7996F8 /* TimeIntervalExtension.swift */,
-				90ECF86A900CCA6BA1A70A9E37443040 /* UIBarButtonItemExtension.swift */,
-				4BA9A2F24A6F1122383C369CEF8718A7 /* UIButtonExtension.swift */,
-				FF0FBDBE547AF7E511F1D2A07C465ECF /* UIImageExtension.swift */,
-				3A9E85DFE6CA17EA90B7D70659EF5077 /* UIImageViewExtension.swift */,
-				75137F710C259CA9D9556DD0A78219A4 /* UITabBarItemExtension.swift */,
-				BABBD02D330D5991FA23B42DA90BD57E /* UIViewExtension.swift */,
-				E37B3CC94D9475986A32D36ACAF427CC /* Utils.swift */,
-				2A4A5170E1A7CFEAAB35427CDB57FA4E /* Support Files */,
-			);
-			name = SwiftMusings;
-			path = SwiftMusings;
 			sourceTree = "<group>";
 		};
 		55D564D3F139F9B6503078B2D5794C80 /* Pods-QrCode */ = {
@@ -252,12 +245,28 @@
 			path = "Target Support Files/Pods-QrCode-QrCodeUITests";
 			sourceTree = "<group>";
 		};
-		A186823E7C5469B0981EA0898522B22E /* Pods */ = {
+		9590E41A29658B02C572479D8C64176F /* SwiftMusings */ = {
 			isa = PBXGroup;
 			children = (
-				2EFF1A57DD6BA07FA8AFD7649A68FF5B /* SwiftMusings */,
+				EE4DB9D52F5403C84F89FD5921C7ABB2 /* AudioManager.swift */,
+				0E31EAFF11E040DDF6DBAD37785B1B5A /* AVPlayerView.swift */,
+				BA9F37509BA2CAB62CCCC2E2022912B3 /* CIImageExtension.swift */,
+				7CC5E48F686CCAA6C3E0EC5E957E7664 /* CodeScannerView.swift */,
+				E8DDD0DE0CA1F105D9B8B19F17BE67A6 /* CustomError.swift */,
+				422601827543E7B2121F12C6E1821152 /* FileManagerExtension.swift */,
+				2871A4894DCC5D220EFBDCC9FAD31EAA /* StringExtension.swift */,
+				0A350BB15EE88DFACF93B201F5DEE09B /* TimeIntervalExtension.swift */,
+				3B468423472BD4FA739A77AF1CEA81A4 /* UIBarButtonItemExtension.swift */,
+				2F513A38FD56E9B0F9B63DB6F39DF206 /* UIButtonExtension.swift */,
+				6A221327EFB91068068CB3956631DA3E /* UIImageExtension.swift */,
+				742E719A2E5B12B438896B923EC88AEE /* UIImageViewExtension.swift */,
+				A501CCB4E27A8EFEC5F2619098264574 /* UITabBarItemExtension.swift */,
+				CD7B51B41F465BE7FF394AD6CCA5CF22 /* UIViewExtension.swift */,
+				A5DABAFBD3E878005054AADB9E652892 /* Utils.swift */,
+				4CC6314490B1061713B26629C5BFE4D9 /* Support Files */,
 			);
-			name = Pods;
+			name = SwiftMusings;
+			path = SwiftMusings;
 			sourceTree = "<group>";
 		};
 		ABA0AB368DC3C18BD6647483F0F69FA3 /* Targets Support Files */ = {
@@ -275,7 +284,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A186823E7C5469B0981EA0898522B22E /* Pods */,
+				3BA78E7AC764FFF2F23993E75F093035 /* Pods */,
 				112852E026529B1F8578174E7544848D /* Products */,
 				ABA0AB368DC3C18BD6647483F0F69FA3 /* Targets Support Files */,
 			);
@@ -292,11 +301,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		38487BD4FB5A22FD7E64306054AF2C75 /* Headers */ = {
+		0BBE7D887A50056AE1856D1794A2AEBE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51A4F0C1EEE53021A597812543425ED7 /* SwiftMusings-umbrella.h in Headers */,
+				54B2FD87D70B5ADB97B690C01076E51A /* SwiftMusings-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +348,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7C8095713251A9BF877FB0B976117300 /* PBXTargetDependency */,
+				EEA8A4C0FE0BC963E539EE5AC17F57D0 /* PBXTargetDependency */,
 			);
 			name = "Pods-QrCode";
 			productName = "Pods-QrCode";
@@ -358,7 +367,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9C20CACDBA9BDFFAE25044F0C533FBDF /* PBXTargetDependency */,
+				27D93A81EC36D6073E8569948E7D43FE /* PBXTargetDependency */,
 			);
 			name = "Pods-QrCode-QrCodeUITests";
 			productName = "Pods-QrCode-QrCodeUITests";
@@ -377,7 +386,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				491CB16DFD3D2488A7948090839B0E83 /* PBXTargetDependency */,
+				A5C59079F50330D38CE123A20EF31EBD /* PBXTargetDependency */,
 			);
 			name = "Pods-QrCodeTests";
 			productName = "Pods-QrCodeTests";
@@ -386,12 +395,12 @@
 		};
 		AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B0D2B760BC4F479A9E8A2D628E7CEB1 /* Build configuration list for PBXNativeTarget "SwiftMusings" */;
+			buildConfigurationList = 81133A8F26834FC93044C7FD65BD7719 /* Build configuration list for PBXNativeTarget "SwiftMusings" */;
 			buildPhases = (
-				38487BD4FB5A22FD7E64306054AF2C75 /* Headers */,
-				F4759BA13F21A0DE6EFF23C5E34C9253 /* Sources */,
-				735248E3A941C7A81D28E845488045EE /* Frameworks */,
-				7483481D6B3B625F8381A87219F5DCE1 /* Resources */,
+				0BBE7D887A50056AE1856D1794A2AEBE /* Headers */,
+				D6F98812F4EDA89840281605C01C4F6D /* Sources */,
+				2E6C8AD62BEA4959ADC5839E7F3A8974 /* Frameworks */,
+				BD42FA20C77437F103CEA63E9786D266 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -440,14 +449,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7483481D6B3B625F8381A87219F5DCE1 /* Resources */ = {
+		8597E052CEC449BD2C7FA76B579DB769 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8597E052CEC449BD2C7FA76B579DB769 /* Resources */ = {
+		BD42FA20C77437F103CEA63E9786D266 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,6 +489,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6F98812F4EDA89840281605C01C4F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6C20171D4A4E0B6F0854A133307EA0 /* AudioManager.swift in Sources */,
+				2BDF0CE94C97E9A4350DDFE9A095EF18 /* AVPlayerView.swift in Sources */,
+				FD151170513A27C7E5B1A59777E95161 /* CIImageExtension.swift in Sources */,
+				7820D01E941239309D0EA11100A91C15 /* CodeScannerView.swift in Sources */,
+				9406E3D89C875D478535416A0F379650 /* CustomError.swift in Sources */,
+				27C3E822B3CB19350A02874961477AD4 /* FileManagerExtension.swift in Sources */,
+				50DBEB63A1524D98B25FB2B5AC5AE5C9 /* StringExtension.swift in Sources */,
+				E6EBB50231EFE63FAC7E3A1DB5CEAFDE /* SwiftMusings-dummy.m in Sources */,
+				393361BB45645C93A0BCEF2FDC62D60B /* TimeIntervalExtension.swift in Sources */,
+				FB267001BAFE1256884338BDEBE6AF25 /* UIBarButtonItemExtension.swift in Sources */,
+				175D7F251375D582D5078575C41BB00C /* UIButtonExtension.swift in Sources */,
+				12FBE1C38DCF6B6065EED9DF2EF55756 /* UIImageExtension.swift in Sources */,
+				F64C083DD35D781C9148D47D88034DCA /* UIImageViewExtension.swift in Sources */,
+				9F91019C4D6A57DCDD189BC051E184FE /* UITabBarItemExtension.swift in Sources */,
+				D82E3A6AA60F00DD478FC83EC2E5C070 /* UIViewExtension.swift in Sources */,
+				09A0CCA40E4DE777E9CB85CDD601A176 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB04D7AC17E062D767B5EDEE11F77EE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,46 +520,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4759BA13F21A0DE6EFF23C5E34C9253 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055336630B8580FC382FDDDC8C487904 /* AudioManager.swift in Sources */,
-				04E1528AFD608A1A82F6C878C45D0BE7 /* CIImageExtension.swift in Sources */,
-				681DA931328BF0A6A01BB4DC7A0BD445 /* FileManagerExtension.swift in Sources */,
-				880E744C075045FDC63F967446CF51DD /* StringExtension.swift in Sources */,
-				7B036ADF12CA1D6592361431F842DBA4 /* SwiftMusings-dummy.m in Sources */,
-				EDB0BE40BE76DA21E6BF5176100B8904 /* TimeIntervalExtension.swift in Sources */,
-				F2AB8D7FA033FA37E30746B5669C6565 /* UIBarButtonItemExtension.swift in Sources */,
-				C6F03B8515755BD59387A0AEBD6E3D2F /* UIButtonExtension.swift in Sources */,
-				D07656603FC6DEA1BC942706FAEAEB6B /* UIImageExtension.swift in Sources */,
-				ACDA8179277AA612A5A80965E7613129 /* UIImageViewExtension.swift in Sources */,
-				E0978891AAE600C482EEF2A7EDAA2D2F /* UITabBarItemExtension.swift in Sources */,
-				0C86A4979AF1DDF41F5463D285F6FC4F /* UIViewExtension.swift in Sources */,
-				E81662C60139D6B563CD9DAA756A6E04 /* Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		491CB16DFD3D2488A7948090839B0E83 /* PBXTargetDependency */ = {
+		27D93A81EC36D6073E8569948E7D43FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftMusings;
+			target = AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */;
+			targetProxy = C1F0F398418C6BF7EA1D4D38C5590655 /* PBXContainerItemProxy */;
+		};
+		A5C59079F50330D38CE123A20EF31EBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-QrCode";
 			target = 0A524CA86FE331F75B250DB474589FFC /* Pods-QrCode */;
-			targetProxy = 9165B9F40A02D54E65AC82DF5FC582A8 /* PBXContainerItemProxy */;
+			targetProxy = FF337173F572DA7FE34105D572A49B6A /* PBXContainerItemProxy */;
 		};
-		7C8095713251A9BF877FB0B976117300 /* PBXTargetDependency */ = {
+		EEA8A4C0FE0BC963E539EE5AC17F57D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftMusings;
 			target = AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */;
-			targetProxy = BFBF0036727612FC96FD164E40505E5B /* PBXContainerItemProxy */;
-		};
-		9C20CACDBA9BDFFAE25044F0C533FBDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftMusings;
-			target = AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */;
-			targetProxy = A41BA1A8CD576FDD54EE326884E64B9C /* PBXContainerItemProxy */;
+			targetProxy = C47DDEF38FC0D4E739A8E9CC09CBCB5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,38 +578,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		104189D3E875965D2E2B9C9CEA72731A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C493EE27A1C496EAFE285E01288CADA /* SwiftMusings.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMusings;
-				PRODUCT_NAME = SwiftMusings;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		3D0203F358E83518DCC137093DD42772 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -733,39 +713,6 @@
 			};
 			name = Debug;
 		};
-		735A1086FE978870722EF8739D7557C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D90E73B24617856B36ECC59F3E2AC397 /* SwiftMusings.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMusings;
-				PRODUCT_NAME = SwiftMusings;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		7FD14ECAB3B1B4E7CB7D4DF413B26F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B80A6886FACAF60D05735818938755D5 /* Pods-QrCode-QrCodeUITests.debug.xcconfig */;
@@ -862,6 +809,39 @@
 			};
 			name = Release;
 		};
+		A8E14E2EB56F31C9EBC933CAF90B582B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 957B8DF1470AEB3CCC5898CE547AC3FD /* SwiftMusings.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMusings;
+				PRODUCT_NAME = SwiftMusings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B0260BAC704241FF035C10439393D617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6D7676846C89EEBD5784124B720B35B /* Pods-QrCode.release.xcconfig */;
@@ -932,6 +912,38 @@
 			};
 			name = Release;
 		};
+		CAE31CCFB96BD882D3463F9E8B12DA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D513F0CCA99E5E3A01632160FC60788 /* SwiftMusings.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMusings/SwiftMusings-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMusings/SwiftMusings-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMusings/SwiftMusings.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMusings;
+				PRODUCT_NAME = SwiftMusings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -944,11 +956,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B0D2B760BC4F479A9E8A2D628E7CEB1 /* Build configuration list for PBXNativeTarget "SwiftMusings" */ = {
+		81133A8F26834FC93044C7FD65BD7719 /* Build configuration list for PBXNativeTarget "SwiftMusings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				104189D3E875965D2E2B9C9CEA72731A /* Debug */,
-				735A1086FE978870722EF8739D7557C6 /* Release */,
+				CAE31CCFB96BD882D3463F9E8B12DA35 /* Debug */,
+				A8E14E2EB56F31C9EBC933CAF90B582B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

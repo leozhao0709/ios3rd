@@ -4,48 +4,67 @@
 
 import SwiftUI
 import MobileCoreServices
+import SwiftMusings
 
-struct ImagePickerView: UIViewControllerRepresentable {
+public struct ImagePickerView: UIViewControllerRepresentable {
 
+    var sourceType: UIImagePickerController.SourceType
+    var mediaTypes: [String]
     var onPickImage: ((_ image: UIImage) -> Void)?
     var onPickVideo: ((_ url: URL) -> Void)?
     var onCancelPick: (() -> Void)?
+    var onError: ((_ error: Error) -> Void)?
 
-    func makeUIViewController(context: Context) -> UIImagePickerController {
+    public init(
+      sourceType: UIImagePickerController.SourceType = .photoLibrary,
+      mediaTypes: [String] = [String(kUTTypeImage), String(kUTTypeMovie)],
+      onPickImage: ((UIImage) -> ())?,
+      onPickVideo: ((URL) -> ())?,
+      onCancelPick: (() -> ())?,
+      onError: ((Error) -> Void)?) {
+        self.sourceType = sourceType
+        self.mediaTypes = mediaTypes
+        self.onPickImage = onPickImage
+        self.onPickVideo = onPickVideo
+        self.onCancelPick = onCancelPick
+        self.onError = onError
+    }
+
+    public func makeUIViewController(context: Context) -> UIImagePickerController {
         let imagePickerController = UIImagePickerController()
-//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            imagePickerController.sourceType = .camera
-//        } else {
-//            imagePickerController.sourceType = .photoLibrary
-//        }
 
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)]
+        if !UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            onCancelPick?()
+            onError?(CustomError("sourceType \(sourceType) is not Available"))
+        }
+
+        imagePickerController.sourceType = sourceType
+        imagePickerController.mediaTypes = mediaTypes
         imagePickerController.delegate = context.coordinator
         return imagePickerController
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+    public func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
     }
 
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
     }
 
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    public class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePickerView
 
         init(parent: ImagePickerView) {
             self.parent = parent
         }
 
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             guard let mediaType = info[.mediaType] as? String else {
                 return
             }
 
             if mediaType == String(kUTTypeImage) {
-                guard let uiImage = info[.originalImage] as? UIImage else{
+                guard let uiImage = info[.originalImage] as? UIImage else {
                     return
                 }
                 parent.onPickImage?(uiImage)
@@ -59,7 +78,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
             }
         }
 
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             parent.onCancelPick?()
         }
     }

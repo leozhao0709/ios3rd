@@ -23,7 +23,7 @@ public class AudioManager {
     public func startNewAudio(
       url: URL,
       onFinishingPlaying: ((_ successfully: Bool) -> Void)? = nil,
-      onError: ((Error) -> Void)? = nil) {
+      onError: ((Error) -> Void)?) {
         do {
             if let audioPlayer = self.audioPlayer {
                 audioPlayer.stop()
@@ -113,7 +113,7 @@ public class AudioManager {
         if deviceModel == "iPhone" {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
         } else {
-            onError?(DeviceNotSupportError(description: "\(deviceModel) not support vibrate sound"))
+            onError?(CustomError("\(deviceModel) not support vibrate sound"))
         }
     }
 
@@ -191,21 +191,6 @@ extension AudioManager {
 // custom type
 @available(macCatalyst 13.0, *)
 extension AudioManager {
-    struct DeviceNotSupportError: LocalizedError {
-        var errorDescription: String? {
-            _description
-        }
-        var failureReason: String? {
-            _description
-        }
-
-        private var _description: String
-
-        init(description: String) {
-            self._description = description
-        }
-    }
-
     @available(macCatalyst 13.0, *)
     class AudioPlayerDelegate: NSObject, AVAudioPlayerDelegate {
 
