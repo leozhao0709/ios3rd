@@ -1,0 +1,21 @@
+PODS:
+  - SwiftMusings (0.1.0)
+
+DEPENDENCIES:
+  - SwiftMusings (from `https://github.com/leozhao0709/SwiftMusings.git`)
+
+EXTERNAL SOURCES:
+  SwiftMusings:
+    :git: https://github.com/leozhao0709/SwiftMusings.git
+
+CHECKOUT OPTIONS:
+  SwiftMusings:
+    :commit: 97a3e4f47a132afa45c4dda2aed5b2327fbb778d
+    :git: https://github.com/leozhao0709/SwiftMusings.git
+
+SPEC CHECKSUMS:
+  SwiftMusings: 0bbcad1bb401952ff7ea29a2338944e65e371bf8
+
+PODFILE CHECKSUM: 0dfbb4309eb7601895e5a4c130bef25afcbcf1da
+
+COCOAPODS: 1.10.0
