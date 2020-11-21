@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5752D17FC016A2E591D1EE27 /* Pods_HypedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4093EA34903DE04C6F749C0 /* Pods_HypedList.framework */; };
+		D42BA45025685957000C3337 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BA44F25685957000C3337 /* UpcomingView.swift */; };
+		D445C4F8256869010036ABF2 /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445C4F7256869010036ABF2 /* CreateHypedEventView.swift */; };
+		D445C4FB25686C090036ABF2 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445C4FA25686C090036ABF2 /* HypedEvent.swift */; };
+		D445C4FF25686E1B0036ABF2 /* FormLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445C4FE25686E1B0036ABF2 /* FormLabelView.swift */; };
 		D463B75E2567789A00CFBC14 /* HypedListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463B75D2567789A00CFBC14 /* HypedListApp.swift */; };
-		D463B7602567789A00CFBC14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463B75F2567789A00CFBC14 /* ContentView.swift */; };
+		D463B7602567789A00CFBC14 /* HypedListTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463B75F2567789A00CFBC14 /* HypedListTabView.swift */; };
 		D463B7622567789B00CFBC14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D463B7612567789B00CFBC14 /* Assets.xcassets */; };
 		D463B7652567789B00CFBC14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D463B7642567789B00CFBC14 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -17,9 +21,13 @@
 /* Begin PBXFileReference section */
 		2593D089C2965365D2D5441A /* Pods-HypedList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypedList.debug.xcconfig"; path = "Target Support Files/Pods-HypedList/Pods-HypedList.debug.xcconfig"; sourceTree = "<group>"; };
 		2D202B66AC0F58C8529CE0D9 /* Pods-HypedList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypedList.release.xcconfig"; path = "Target Support Files/Pods-HypedList/Pods-HypedList.release.xcconfig"; sourceTree = "<group>"; };
+		D42BA44F25685957000C3337 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		D445C4F7256869010036ABF2 /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
+		D445C4FA25686C090036ABF2 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
+		D445C4FE25686E1B0036ABF2 /* FormLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelView.swift; sourceTree = "<group>"; };
 		D463B75A2567789A00CFBC14 /* HypedList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypedList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D463B75D2567789A00CFBC14 /* HypedListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedListApp.swift; sourceTree = "<group>"; };
-		D463B75F2567789A00CFBC14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D463B75F2567789A00CFBC14 /* HypedListTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedListTabView.swift; sourceTree = "<group>"; };
 		D463B7612567789B00CFBC14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D463B7642567789B00CFBC14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D463B7662567789B00CFBC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +52,6 @@
 				2593D089C2965365D2D5441A /* Pods-HypedList.debug.xcconfig */,
 				2D202B66AC0F58C8529CE0D9 /* Pods-HypedList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,10 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				D463B75D2567789A00CFBC14 /* HypedListApp.swift */,
-				D463B75F2567789A00CFBC14 /* ContentView.swift */,
+				D463B75F2567789A00CFBC14 /* HypedListTabView.swift */,
 				D463B7612567789B00CFBC14 /* Assets.xcassets */,
 				D463B7662567789B00CFBC14 /* Info.plist */,
 				D463B7632567789B00CFBC14 /* Preview Content */,
+				D42BA44F25685957000C3337 /* UpcomingView.swift */,
+				D445C4FA25686C090036ABF2 /* HypedEvent.swift */,
+				D445C4FE25686E1B0036ABF2 /* FormLabelView.swift */,
+				D445C4F7256869010036ABF2 /* CreateHypedEventView.swift */,
 			);
 			path = HypedList;
 			sourceTree = "<group>";
@@ -207,8 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D463B7602567789A00CFBC14 /* ContentView.swift in Sources */,
+				D445C4FB25686C090036ABF2 /* HypedEvent.swift in Sources */,
+				D445C4FF25686E1B0036ABF2 /* FormLabelView.swift in Sources */,
+				D445C4F8256869010036ABF2 /* CreateHypedEventView.swift in Sources */,
+				D463B7602567789A00CFBC14 /* HypedListTabView.swift in Sources */,
 				D463B75E2567789A00CFBC14 /* HypedListApp.swift in Sources */,
+				D42BA45025685957000C3337 /* UpcomingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

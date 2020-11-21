@@ -7,4 +7,5 @@ target 'HypedList' do
 
   # Pods for HypedList
   pod 'SwiftMusings', :git => 'https://github.com/leozhao0709/SwiftMusings.git'
+  pod 'SwiftDate'
 end

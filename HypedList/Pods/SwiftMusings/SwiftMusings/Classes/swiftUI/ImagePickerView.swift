@@ -4,12 +4,11 @@
 
 import SwiftUI
 import MobileCoreServices
-import SwiftMusings
 
 public struct ImagePickerView: UIViewControllerRepresentable {
 
-    var sourceType: UIImagePickerController.SourceType
-    var mediaTypes: [String]
+    var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    var mediaTypes: [String] = [String(kUTTypeImage), String(kUTTypeMovie)]
     var onPickImage: ((_ image: UIImage) -> Void)?
     var onPickVideo: ((_ url: URL) -> Void)?
     var onCancelPick: (() -> Void)?

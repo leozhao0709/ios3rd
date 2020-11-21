@@ -1,8 +1,14 @@
 PODS:
+  - SwiftDate (6.3.0)
   - SwiftMusings (0.1.0)
 
 DEPENDENCIES:
+  - SwiftDate
   - SwiftMusings (from `https://github.com/leozhao0709/SwiftMusings.git`)
+
+SPEC REPOS:
+  trunk:
+    - SwiftDate
 
 EXTERNAL SOURCES:
   SwiftMusings:
@@ -14,8 +20,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/leozhao0709/SwiftMusings.git
 
 SPEC CHECKSUMS:
+  SwiftDate: ec6c0e173627a3ae6dd1671888a7f175956ebb94
   SwiftMusings: 0bbcad1bb401952ff7ea29a2338944e65e371bf8
 
-PODFILE CHECKSUM: 0dfbb4309eb7601895e5a4c130bef25afcbcf1da
+PODFILE CHECKSUM: d68a95168edac280933bf8c2089db791e5a914f7
 
 COCOAPODS: 1.10.0
