@@ -13,8 +13,14 @@ struct ContentView: View {
 
     @State var btnTitle = "Hold To Speak"
     @State var btnIsPressing = false
+    @State var sayingMessage: String?
     let audioManager = AudioManager.shared
     let audioUrl = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Documents/record.m4a")
+    @State var gameOver = false
+    @State var guessingNum = (1...100).randomElement()!
+    @State var showGameOver = false
+    @State var hintText = ""
+    @State var useChinese = false
 
     var body: some View {
         ZStack {
@@ -25,11 +31,20 @@ struct ContentView: View {
 
                 VStack {
                     Image("mic")
-                    Text("Guess a Number Between      1 - 100")
+                        .padding(35)
+                    Toggle(isOn: $useChinese) {
+                        Text("Use Chinese")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    }.fixedSize()
+                    Text("Guess a Number Between\n1 - 100")
                       .multilineTextAlignment(.center)
                       .font(.largeTitle)
                       .foregroundColor(.white)
                     Button(btnTitle) {
+                        self.btnIsPressing.toggle()
+                        self.btnTitle = "Hold To Speak"
+                        self.finishRecording()
                     }
                       .padding()
                       .onLongPressGesture(pressing: { isPressing in
@@ -38,17 +53,37 @@ struct ContentView: View {
                               self.startRecording()
                           }
                       }) {
-                          self.btnIsPressing.toggle()
-                          self.btnTitle = "Hold To Speak"
-                          self.finishRecording()
                       }
                       .foregroundColor(.black)
                       .font(.system(size: 20, weight: .medium))
                       .background(Color.gray)
                       .padding()
+                    if let message = self.sayingMessage {
+                        VStack(spacing: 20) {
+                            Text("You said:")
+                            Text(message)
+                              .padding()
+                              .border(Color.gray, width: 2)
+                            Text(hintText)
+                                .multilineTextAlignment(.center)
+                        }
+                          .font(.title)
+                          .foregroundColor(.white)
+                    }
                 }
                   .frame(width: proxy.size.width, height: proxy.size.height)
             }
+              .alert(isPresented: $showGameOver) {
+                  Alert(
+                    title: Text("You Got it"),
+                    message: Text("The guessing number is \(self.guessingNum)"),
+                    dismissButton: .default(Text("Play Again")) {
+                        self.guessingNum = (1...100).randomElement()!
+                        self.showGameOver = false
+                        self.sayingMessage = nil
+                    }
+                  )
+              }
         }.ignoresSafeArea()
     }
 
@@ -62,9 +97,18 @@ struct ContentView: View {
     }
 
     private func recognizeVoice(audioUrl: URL) {
-//        let locale = Locale(identifier: "nl_NL")
-//        SFSpeechRecognizer(locale: locale)
-        guard let recognizer = SFSpeechRecognizer(), recognizer.isAvailable else {
+        var recognizer: SFSpeechRecognizer?
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .spellOut
+        if useChinese {
+            let locale = Locale(identifier: "zh")
+            numberFormatter.locale = locale
+            recognizer = SFSpeechRecognizer(locale: locale)
+        } else {
+            recognizer = SFSpeechRecognizer()
+        }
+
+        guard let speechRecognizer = recognizer , speechRecognizer.isAvailable else {
             printLog("Speech recognizer not available.")
             return
         }
@@ -72,7 +116,7 @@ struct ContentView: View {
         let recognitionRequest = SFSpeechURLRecognitionRequest(url: audioUrl)
         recognitionRequest.shouldReportPartialResults = true
 
-        recognizer.recognitionTask(with: recognitionRequest) { (result, error) in
+        speechRecognizer.recognitionTask(with: recognitionRequest) { (result, error) in
             guard error == nil else {
                 printLog(error!.localizedDescription); return
             }
@@ -82,9 +126,28 @@ struct ContentView: View {
 
             print("got a new result: \(result.bestTranscription.formattedString), final : \(result.isFinal)")
             if result.isFinal {
-                printLog(result.bestTranscription.formattedString)
                 DispatchQueue.main.async {
-//                    self.updateUI(withResult: result)
+                    let formattedString = result.bestTranscription.formattedString
+                    let message = numberFormatter.number(from: formattedString.lowercased())?.stringValue
+                    self.sayingMessage = message ?? formattedString
+
+                    guard
+                      let customMessage = message,
+                      let customerGuessNumer = Int(customMessage),
+                          (1...100).contains(customerGuessNumer)
+                      else {
+                        self.hintText = "Please give a number\n between 1 to 100"
+                        return
+                    }
+
+                    if (customerGuessNumer < guessingNum) {
+                        self.hintText = "GO HIGHER"
+                    } else if(customerGuessNumer > guessingNum) {
+                        self.hintText = "GO LOWER"
+                    } else {
+                        self.hintText = "YOU GOT IT"
+                        self.showGameOver = true
+                    }
                 }
             }
         }
