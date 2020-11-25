@@ -132,7 +132,7 @@ struct ContentView: View {
                     self.sayingMessage = message ?? formattedString
 
                     guard
-                      let customMessage = message,
+                      let customMessage = self.sayingMessage,
                       let customerGuessNumer = Int(customMessage),
                           (1...100).contains(customerGuessNumer)
                       else {

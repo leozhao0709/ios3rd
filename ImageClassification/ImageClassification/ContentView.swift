@@ -8,41 +8,72 @@
 
 import SwiftUI
 import SwiftMusings
+import CoreML
 
 struct ContentView: View {
 
-    @State var showCamera = false
+    @State var showSheet = false
     @State var uiImage: UIImage?
-
-    private func analyze(image: UIImage) {
-        guard let resizedImage = image.resize(CGSize(width: 224, height: 224))
-          let buffer = resizedImage
-          else {
-
-        }
-    }
+    @State var predicatedText: String?
+    @State var showActionSheet = false
+    @State var imagePickerSourceType: UIImagePickerController.SourceType = .photoLibrary
 
     var body: some View {
-        NavigationView {
-            VStack {
-                if let image = uiImage {
-                    Image(uiImage: image)
-                }
+        VStack {
+            if let image = uiImage {
+                Image(uiImage: image)
+                  .resizable()
+                  .scaledToFit()
+                  .frame(maxHeight: 200)
             }
-                .navigationBarItems(trailing: Button("Scan") {
-                    self.showCamera.toggle()
-                })
-                .sheet(isPresented: $showCamera) {
-                    ImagePickerView(sourceType: .camera, onPickImage: { image in
-                        self.uiImage = image
-                    }, onPickVideo: nil, onCancelPick: {
-                        self.showCamera.toggle()
-                    }, onError: { error in
-                        printLog(error.localizedDescription)
-                        self.showCamera.toggle()
-                    })
-                }
+
+            if let predicatedText = predicatedText {
+                Text(predicatedText)
+                  .multilineTextAlignment(.center)
+            }
+
+            Button("select or take photo") {
+                self.showActionSheet.toggle()
+            }
         }
+          .actionSheet(isPresented: $showActionSheet) {
+              ActionSheet(title: Text("Select A PhotoSource"), buttons: [
+                  .default(Text("Select from photo")) {
+                      self.imagePickerSourceType = .photoLibrary
+                      self.showSheet.toggle()
+                  },
+                  .default(Text("Take a photo")) {
+                      self.imagePickerSourceType = .camera
+                      self.showSheet.toggle()
+                  }
+              ])
+          }
+          .sheet(isPresented: $showSheet) {
+              ImagePickerView(sourceType: self.imagePickerSourceType, onPickImage: { image in
+                  self.uiImage = image
+                  self.showSheet.toggle()
+
+
+                  guard let imageVisionClassifier = try? ImageVisionClassifier(mlModel: CatDogMLTrain_1(
+                    configuration: MLModelConfiguration()).model) else {
+                      return
+                  }
+
+                  imageVisionClassifier.classify(image, onComplete: { observations in
+                      self.predicatedText = observations.map {
+                          "\($0.identifier): \($0.confidence)"
+                      }.joined(separator: "\n")
+                  }, onError: { error in
+                      printLog(error.localizedDescription)
+                  })
+
+              }, onPickVideo: nil, onCancelPick: {
+                  self.showSheet.toggle()
+              }, onError: { error in
+                  printLog(error.localizedDescription)
+                  self.showSheet.toggle()
+              })
+          }
     }
 }
 

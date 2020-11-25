@@ -14,7 +14,7 @@ public struct CustomError: LocalizedError {
 
     private var _description: String
 
-    init(_ description: String) {
+    public init(_ description: String) {
         self._description = description
     }
 }
