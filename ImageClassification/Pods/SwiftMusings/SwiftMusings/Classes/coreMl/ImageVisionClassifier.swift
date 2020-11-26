@@ -6,19 +6,19 @@ import Foundation
 import CoreML
 import Vision
 import UIKit
-import SwiftMusings
 
-class ImageVisionClassifier {
+@available(macCatalyst 13.0, *)
+public class ImageVisionClassifier {
     private let model: VNCoreMLModel
 
-    init?(mlModel: MLModel) {
+    public init?(mlModel: MLModel) {
         guard let model = try? VNCoreMLModel(for: mlModel) else {
             return nil
         }
         self.model = model
     }
 
-    func classify(
+    public func classify(
       _ image: UIImage,
       onComplete: ((_ result: [VNClassificationObservation]) -> Void)? = nil,
       onError: ((Error) -> Void)?
@@ -37,7 +37,9 @@ class ImageVisionClassifier {
                         onError?(CustomError("Cannot convert results to [VNClassificationObservation] "))
                         return
                     }
-                    onComplete?(results)
+                    DispatchQueue.main.async {
+                        onComplete?(results)
+                    }
                 }
                 request.imageCropAndScaleOption = .centerCrop
 

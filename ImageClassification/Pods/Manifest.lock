@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftMusings:
-    :commit: f3240c8f4ce1ef67d076e11fb190b4dbe59c226a
+    :commit: 807f2e184cfbd483f3be30073f5daf00e69c87e3
     :git: https://github.com/leozhao0709/SwiftMusings.git
 
 SPEC CHECKSUMS:

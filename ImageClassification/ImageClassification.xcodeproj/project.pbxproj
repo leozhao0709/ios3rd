@@ -11,7 +11,6 @@
 		37B2141FF94F0EE961443C54 /* ImageClassificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2173A1FB02BDABDB1D39C /* ImageClassificationApp.swift */; };
 		37B2197A08A6943DC79C1F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B21F8B5F8B95B6D66E7596 /* Assets.xcassets */; };
 		37B21A4A98DC7E2E6E74D9A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B21FE5039104F48E555F32 /* Preview Assets.xcassets */; };
-		37B21DF926C4BC6B8852F12B /* ImageVisionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B218870FD32D71CE163A89 /* ImageVisionClassifier.swift */; };
 		9376846D6EF3A511F26D68B5 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416F209FDB3DD97823D1F5BA /* Pods_ImageClassification.framework */; };
 		D48AFF10256DEEB600D2324A /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D48AFF0F256DEEB600D2324A /* MobileNetV2.mlmodel */; };
 		D4EF37A0256E0DC900156F1F /* CatDogMLTrain 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D4EF379F256E0DC900156F1F /* CatDogMLTrain 1.mlmodel */; };
@@ -22,7 +21,6 @@
 		37B215640513D8193601F0A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37B2164DB918F02C7EC56FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		37B2173A1FB02BDABDB1D39C /* ImageClassificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationApp.swift; sourceTree = "<group>"; };
-		37B218870FD32D71CE163A89 /* ImageVisionClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVisionClassifier.swift; sourceTree = "<group>"; };
 		37B21F8B5F8B95B6D66E7596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B21FE5039104F48E555F32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		416F209FDB3DD97823D1F5BA /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +62,6 @@
 				37B2173A1FB02BDABDB1D39C /* ImageClassificationApp.swift */,
 				37B215640513D8193601F0A9 /* ContentView.swift */,
 				D4EF379F256E0DC900156F1F /* CatDogMLTrain 1.mlmodel */,
-				37B218870FD32D71CE163A89 /* ImageVisionClassifier.swift */,
 			);
 			path = ImageClassification;
 			sourceTree = "<group>";
@@ -113,7 +110,7 @@
 				37B21ABA2DB57043E8352291 /* Sources */,
 				37B2138EA879A9056F78EE89 /* Frameworks */,
 				37B21DA8B94C621336D7D093 /* Resources */,
-				71C1207314D5DE9B45FE8BEE /* [CP] Embed Pods Frameworks */,
+				34316837E866E5250FA74EDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,7 +164,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		71C1207314D5DE9B45FE8BEE /* [CP] Embed Pods Frameworks */ = {
+		34316837E866E5250FA74EDE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,7 +215,6 @@
 				D4EF37A0256E0DC900156F1F /* CatDogMLTrain 1.mlmodel in Sources */,
 				37B2141FF94F0EE961443C54 /* ImageClassificationApp.swift in Sources */,
 				37B211FD94CAF958DE17559E /* ContentView.swift in Sources */,
-				37B21DF926C4BC6B8852F12B /* ImageVisionClassifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

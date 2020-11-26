@@ -24,7 +24,7 @@ struct ContentView: View {
                 Image(uiImage: image)
                   .resizable()
                   .scaledToFit()
-                  .frame(maxHeight: 200)
+//                  .frame(maxHeight: 200)
             }
 
             if let predicatedText = predicatedText {
@@ -50,22 +50,28 @@ struct ContentView: View {
           }
           .sheet(isPresented: $showSheet) {
               ImagePickerView(sourceType: self.imagePickerSourceType, onPickImage: { image in
-                  self.uiImage = image
+//                  self.uiImage = image
                   self.showSheet.toggle()
 
 
-                  guard let imageVisionClassifier = try? ImageVisionClassifier(mlModel: CatDogMLTrain_1(
-                    configuration: MLModelConfiguration()).model) else {
-                      return
-                  }
+//                  guard let imageVisionClassifier = try? ImageVisionClassifier(mlModel: CatDogMLTrain_1(
+//                    configuration: MLModelConfiguration()).model) else {
+//                      return
+//                  }
+//
+//                  imageVisionClassifier.classify(image, onComplete: { observations in
+//                      self.predicatedText = observations.map {
+//                          "\($0.identifier): \($0.confidence)"
+//                      }.joined(separator: "\n")
+//                  }, onError: { error in
+//                      printLog(error.localizedDescription)
+//                  })
 
-                  imageVisionClassifier.classify(image, onComplete: { observations in
-                      self.predicatedText = observations.map {
-                          "\($0.identifier): \($0.confidence)"
-                      }.joined(separator: "\n")
-                  }, onError: { error in
-                      printLog(error.localizedDescription)
-                  })
+              let faceVisionClassifier = FaceVisionClassifier()
+                faceVisionClassifier.detectFaces(image: image, onComplete: { img, observations in
+                    self.uiImage = img
+                    print("\(observations.count)")
+                }, onError: nil)
 
               }, onPickVideo: nil, onCancelPick: {
                   self.showSheet.toggle()

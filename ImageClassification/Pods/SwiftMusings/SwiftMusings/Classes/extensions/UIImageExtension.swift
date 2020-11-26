@@ -6,6 +6,7 @@ import SwiftUI
 import UIKit
 import Accelerate
 import CoreImage.CIFilterBuiltins
+import Vision
 
 //refer: https://github.com/melvitax/AFImageHelper
 
@@ -194,31 +195,31 @@ extension UIImage {
 
         return StaticSharedCache.shared!
     }
-    
+
     // useful for MobileNetV2 coreML model
     public func toCVPixelBuffer() -> CVPixelBuffer? {
-        
+
         let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-        var pixelBuffer : CVPixelBuffer?
+        var pixelBuffer: CVPixelBuffer?
         let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(self.size.width), Int(self.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
         guard (status == kCVReturnSuccess) else {
             return nil
         }
-        
+
         CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-        
+
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let context = CGContext(data: pixelData, width: Int(self.size.width), height: Int(self.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-        
+
         context?.translateBy(x: 0, y: self.size.height)
         context?.scaleBy(x: 1.0, y: -1.0)
-        
+
         UIGraphicsPushContext(context!)
         self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-        
+
         return pixelBuffer
     }
 
@@ -258,7 +259,7 @@ extension UIImage {
             return nil
         }
 
-        guard filter.inputKeys.contains(kCIInputImageKey) else{
+        guard filter.inputKeys.contains(kCIInputImageKey) else {
             return nil
         }
 
@@ -857,7 +858,7 @@ extension UIImage {
 
         return outputImage
     }
-    
+
     public func extractQRCode() -> [String]? {
         //1. 创建过滤器
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil)
@@ -929,7 +930,42 @@ extension UIImage {
         }
         return placeholder
     }
-
-    
 }
 
+// Vision related
+@available(macCatalyst 13.0, *)
+extension UIImage {
+
+    public func addVNFaceObservation(
+      observations: [VNFaceObservation],
+      color: UIColor = .red,
+      lineWidth: CGFloat = 5.0
+    ) -> UIImage? {
+        UIGraphicsBeginImageContext(self.size)
+
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width * self.scale, height: self.size.height * self.scale))
+
+        context.setStrokeColor(color.cgColor)
+        context.setLineWidth(lineWidth)
+
+        let transform = CGAffineTransform(scaleX: 1 * self.scale, y: -1 * self.scale)
+          .translatedBy(x: 0, y: -self.size.height * self.scale)
+
+        for observation in observations {
+            let rect = observation.boundingBox
+
+            let normalizedRect = VNImageRectForNormalizedRect(rect, Int(self.size.width * self.scale), Int(self.size.height * self.scale))
+              .applying(transform)
+            context.stroke(normalizedRect)
+        }
+
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return result
+    }
+}
