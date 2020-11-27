@@ -22,8 +22,7 @@ public class AudioManager {
 
     public func startNewAudio(
       url: URL,
-      onFinishingPlaying: ((_ successfully: Bool) -> Void)? = nil,
-      onError: ((Error) -> Void)?) {
+      onComplete: ((_ successfully: Bool, _ error: Error?) -> Void)? = nil) {
         do {
             if let audioPlayer = self.audioPlayer {
                 audioPlayer.stop()
@@ -36,7 +35,7 @@ public class AudioManager {
             let audioPlayer = try AVAudioPlayer(contentsOf: url)
 
             self.audioPlayerDelegate = AudioPlayerDelegate()
-            self.audioPlayerDelegate?.onFinishingPlaying = onFinishingPlaying
+            self.audioPlayerDelegate?.onComplete = onComplete
             audioPlayer.delegate = self.audioPlayerDelegate
 
             self.audioPlayer = audioPlayer
@@ -52,7 +51,7 @@ public class AudioManager {
 
             self.audioPlayer?.play()
         } catch {
-            onError?(error)
+            onComplete?(false, error)
         }
     }
 
@@ -156,11 +155,11 @@ extension AudioManager {
 
     public func startRecord(
       saveUrl: URL = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Documents/record.m4a"),
-      onError: ((Error) -> Void)? = nil,
       AVSampleRate: Int = 44100,
       AVFormatID: UInt32 = kAudioFormatMPEG4AAC,
       AVNumberOfChannels: Int = 1,
-      AVEncoderAudioQuality: AVAudioQuality = AVAudioQuality.high
+      AVEncoderAudioQuality: AVAudioQuality = AVAudioQuality.high,
+      onError: ((Error) -> Void)? = nil
     ) {
 
         do {
@@ -194,13 +193,14 @@ extension AudioManager {
     @available(macCatalyst 13.0, *)
     class AudioPlayerDelegate: NSObject, AVAudioPlayerDelegate {
 
-        var onFinishingPlaying: ((_ flag: Bool) -> Void)?
+        var onComplete: ((_ flag: Bool, _ error: Error?) -> Void)?
 
         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-            onFinishingPlaying?(flag)
+            onComplete?(flag, nil)
         }
 
         func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+            onComplete?(false, error)
         }
 
         func audioPlayerBeginInterruption(_ player: AVAudioPlayer) {

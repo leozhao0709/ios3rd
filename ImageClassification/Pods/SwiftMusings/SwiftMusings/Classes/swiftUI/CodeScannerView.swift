@@ -6,14 +6,13 @@ import SwiftUI
 import AVFoundation
 
 // This can scan [.qr, .code128, .code39, .code93, .code39Mod43, .ean8, .ean13, .upce, .pdf417, .aztec] code
+@available(macCatalyst 13.0, *)
 public struct CodeScannerView: UIViewControllerRepresentable {
 
-    var onGetCodes: ((_ codes: [String]) -> Void)?
-    var onError: ((_ error: Error) -> Void)?
+    var onGetCodes: ((_ codes: [String], _ error: Error?) -> Void)?
 
-    public init(onGetCodes: (([String]) -> ())? = nil, onError: ((Error) -> ())?) {
+    public init(onGetCodes: ((_ codes: [String], _ error: Error?) -> ())? = nil) {
         self.onGetCodes = onGetCodes
-        self.onError = onError
     }
 
     public func makeCoordinator() -> Coordinator {
@@ -29,6 +28,7 @@ public struct CodeScannerView: UIViewControllerRepresentable {
     public func updateUIViewController(_ uiViewController: Coordinator, context: Context) {
     }
 
+    @available(macCatalyst 13.0, *)
     public class Coordinator: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         let session = AVCaptureSession()
         weak var previewLayer: AVCaptureVideoPreviewLayer?
@@ -39,12 +39,12 @@ public struct CodeScannerView: UIViewControllerRepresentable {
 
             //1. 获取输入设备
             guard let inputDevice = AVCaptureDevice.default(for: .video) else {
-                parentController?.onError?(CustomError("Device not support for code scanning"))
+                parentController?.onGetCodes?([], CustomError("Device not support for code scanning"))
                 return
             }
 
             guard let input = try? AVCaptureDeviceInput(device: inputDevice) else {
-                parentController?.onError?(CustomError("Device not support for code scanning"))
+                parentController?.onGetCodes?([], CustomError("Device not support for code scanning"))
                 return
             }
 
@@ -104,7 +104,7 @@ public struct CodeScannerView: UIViewControllerRepresentable {
                 }
             }
 
-            self.parentController?.onGetCodes?(resultArr)
+            self.parentController?.onGetCodes?(resultArr, nil)
         }
     }
 

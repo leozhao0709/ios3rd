@@ -8,37 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		041243845177803D55C62C7DC0924E53 /* Pods-ImageClassification-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA03814E767784D9E437F92DAF079FD /* Pods-ImageClassification-dummy.m */; };
-		1FCA8E2AAC9D16C03C72A9F9CEE64A11 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6BA44FB0705ED7A20A8C0EACEB163 /* Utils.swift */; };
-		21BD2B8F0721FCA8736E0E5DA713CF4E /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550840A020FDF73B4AAAD8EC7B8A65E3 /* FilterManager.swift */; };
-		360B11C95ACD3D557EDAAD8A430B80BE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA267DEE9DB38BFF38B30D59AE4071A /* test.swift */; };
+		06D4E79F63A300B6E8A727B3649E3AE7 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DDA64261CC891453FAF6A6EF1AB03C /* CIImageExtension.swift */; };
+		15786E1C7294CABC562AAE1D6A3B8B88 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86149C3FD9555A298435754B1F4C4614 /* Utils.swift */; };
+		16A93759BE7A4F335F57E93548F19B4F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D028B6B74F7F44235CDA1D755EEBA /* UIViewExtension.swift */; };
+		2AA8210F605842ECBE5D321C0B700D97 /* CodeClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE432015001FB7ADB2E10418BD259B32 /* CodeClassifier.swift */; };
+		2D182FD73A4188ABFF6963C79BF7F2EF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C41A1CB91BCC02E58291954F2D820 /* UIButtonExtension.swift */; };
+		38C4212007047174F62DE56A80DDEBBD /* TextClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDEB5DC9A7A811E729D67CDBD5E84 /* TextClassifier.swift */; };
+		39118E8ABC1AE8F97A15DB2A1EF2A833 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690F610B5B318AF56C2EEDEE266B032 /* ImagePickerView.swift */; };
 		3FB70C21009F14FA1CC71CAE59EF122E /* Pods-ImageClassification-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E90835DA65CFB34510F3AE80E11440A /* Pods-ImageClassification-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		407229344B66EC87F0AE4383AE2D6192 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893BA4102EB94D5412C7DDC092C3C60 /* CustomError.swift */; };
-		462CD7C205C5E635A98F244AA94F5C90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE5DFD96F8752696A1FC7DBB6CB09C /* StringExtension.swift */; };
-		4717E5BCE3FB87673B88568D519100B4 /* AudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0BDA4453450301D8601E3CC706F80 /* AudioClassifier.swift */; };
-		4BB57D5D4FBA1833294C7F7C554BC6F7 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD59B52E9A392BC4059251C1963B9A0 /* UIButtonExtension.swift */; };
-		5B562C1975D14BABFB162EC50246EC7D /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EA003748D2EAB2E6549617A5CF15 /* CIImageExtension.swift */; };
-		640DC2000E4BFBBCFAAF2FC90CDAF443 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD823B6062943CD058B01A6697B9C89E /* UIViewExtension.swift */; };
+		563E4E9DFFF88F80C0E199BC1436D90C /* AudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFECDD04A2EBB968AF150B50E3C3340 /* AudioClassifier.swift */; };
+		683C77D80CE5440A9A2684CA52CA2396 /* SwiftMusings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 534CDF82A57FC5EED13725CAE84BB78F /* SwiftMusings-dummy.m */; };
+		6DD919925CE003A2EDCEF0C370B019CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175E687B352947800024B18FFC014E7 /* StringExtension.swift */; };
 		70D5FA1C2F56258E773D677559AB07AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		78AF229C39284AFBADDF251BDCB7B931 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449340D426BE64BB1674A42CE9ED8AB /* AudioManager.swift */; };
-		8D19D7D737C34FA28E3702EA3254287B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B3C4FEB6FC076937BA2A7231C3045 /* UIImageViewExtension.swift */; };
-		A4FB9E6685E92850F8614A483E4B5CBE /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C18BCC0E3D3B107E32A7DE56C0583BE /* TimeIntervalExtension.swift */; };
-		B4CCAA6724449B2EFD2359656F1DFBC0 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47811A2AD52BC065E8152C0C497F44 /* AVPlayerView.swift */; };
-		B4F023304BE4F9C658D1CB71A271CA26 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17E88317C873A34058A095B0D7FF82 /* PermissionManager.swift */; };
-		B61D071DD3988B6CDDFA212FAFF5C518 /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF19CC5C890E8D2D60DC6656A83138D /* UITabBarItemExtension.swift */; };
-		BC3D6B27F9521A795452F4A71B7BB5A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C998C79F7F2087D42C55FB326F6AC4D7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22485F66FBEAA2BF9667556DDDFE42F0 /* ImagePickerView.swift */; };
-		CF695603846A75E37AFE812FC294F111 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F0923B43616BA80ADB4CE4CD821A6C /* UIImageExtension.swift */; };
-		DD7E9CE19EBE57FDD2F23721AD9937FE /* ImageVisionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2146671916D06FDF0946F99CD3F29F /* ImageVisionClassifier.swift */; };
-		E580C81623582FB2BB267F02067334BB /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174867159D5D0B43C73687EA5B894F40 /* FileManagerExtension.swift */; };
-		E6814C3095323C1A5399AC79026C936B /* FaceVisionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1EBC9FDE9732F97797AF2CC1E11A2 /* FaceVisionClassifier.swift */; };
-		E90AB743C3E84BAD22CDE7A2C9BC7375 /* SwiftMusings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EE3BA11BAE399B4A80B12DF0D23A7C /* SwiftMusings-dummy.m */; };
-		EAFFC331C9083D88DE1BBACF56B67345 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF9DDE3395847DCB872B6A4DD18691 /* UIBarButtonItemExtension.swift */; };
-		ED6101FB3AB518D302D51EDF8EBBC328 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610B26C5AD1BAC00901B6386C8BF593 /* CodeScannerView.swift */; };
-		F9D77A4465C3F1133DED3EB5ED6AF75E /* SwiftMusings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AADA0F8E4DBC8BEC2A1198EF4621C63C /* SwiftMusings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7457801389B91F80DE7B4CBB9AEB3827 /* SwiftMusings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EB6CD8A9C91E19B0F2F3D131EB7F112 /* SwiftMusings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7722B83AB11B431BCD8A94651FE730B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		80C2ACD12CEA0FA0BEA114337E41BC30 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C3950BF8C1A6750494642335E55DC5 /* FilterManager.swift */; };
+		80E38290445B72961653571671A9B4AD /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FABF871952F02D4B9ECE0AE325E63 /* UITabBarItemExtension.swift */; };
+		824B435DA25A8B0E1FB2C6906856DCCA /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBF5F00797BACCA1253261CD75F57A /* FileManagerExtension.swift */; };
+		8F7B4D2A13F2FF334A3CBC72155878D5 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3CCE4E02E40695E91B5DEE2EDC65F6 /* TimeIntervalExtension.swift */; };
+		900A92C982FF3DF709F5D135552DCCD1 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C320D3C95E2185E40C41F66D3B0CE28 /* UIBarButtonItemExtension.swift */; };
+		A8ABB83CE57CE62466D8E0DD79351EF3 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FA036CCA55EC748CF5A5A7755072F /* AVPlayerView.swift */; };
+		AA2C69DA0988E9FC30F415F7D8488A81 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601F195191226E10373A579830F3E73 /* UIImageExtension.swift */; };
+		BCF8B41570763509D0634B30D48EA531 /* FaceVisionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9959F7F3FFA5BDF0B849578E04716 /* FaceVisionClassifier.swift */; };
+		CBACBD8C4F9A6D1690179B01C06DF6FD /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D03B3FF150D09E6FF4794628089D6 /* UIImageViewExtension.swift */; };
+		D54AA55AFE91CE8EFCA01CF37FFE2B60 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5B4EFC14678BCC3ACEDFD8998D8A8 /* CustomError.swift */; };
+		D803DE6793C232BE7A4CDDDB407A309C /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7135A68CE0EB268E85974D1E3EF6F6F /* CodeScannerView.swift */; };
+		E02F4373DF7EC8ACE80887B319DAC830 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA4C3ADF803241E3FDB172EDDA6563 /* PermissionManager.swift */; };
+		E6C4D01DD675D1ED4B4D466D57E9CF4C /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A856946A628905A9A8ED73C4CEF35B /* ImageClassifier.swift */; };
+		F4E0466E3B4B04C838061750A7F87808 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630825D90BE466A4F9BFF9D65F05FC9C /* AudioManager.swift */; };
+		FA47137655540357CE109F95095558E3 /* ImageVisionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200723F90DB0AA2F675B25366EF11D7 /* ImageVisionClassifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A4053AB05E1FB2380C1D91D158E51BE /* PBXContainerItemProxy */ = {
+		A906713A84A300D389876BA627DCD895 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -48,56 +50,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035C41A1CB91BCC02E58291954F2D820 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = SwiftMusings/Classes/extensions/UIButtonExtension.swift; sourceTree = "<group>"; };
+		0690F610B5B318AF56C2EEDEE266B032 /* ImagePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePickerView.swift; path = SwiftMusings/Classes/swiftUI/ImagePickerView.swift; sourceTree = "<group>"; };
 		095263FC25C93B979406B3078148D2A8 /* Pods-ImageClassification-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImageClassification-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0AF19CC5C890E8D2D60DC6656A83138D /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarItemExtension.swift; path = SwiftMusings/Classes/extensions/UITabBarItemExtension.swift; sourceTree = "<group>"; };
-		0D882BA3BAC8847AB74A407553B76EB9 /* SwiftMusings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.debug.xcconfig; sourceTree = "<group>"; };
-		135B3C4FEB6FC076937BA2A7231C3045 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = SwiftMusings/Classes/extensions/UIImageViewExtension.swift; sourceTree = "<group>"; };
-		174867159D5D0B43C73687EA5B894F40 /* FileManagerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = SwiftMusings/Classes/extensions/FileManagerExtension.swift; sourceTree = "<group>"; };
-		1AD59B52E9A392BC4059251C1963B9A0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = SwiftMusings/Classes/extensions/UIButtonExtension.swift; sourceTree = "<group>"; };
+		0C2FABF871952F02D4B9ECE0AE325E63 /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarItemExtension.swift; path = SwiftMusings/Classes/extensions/UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		0C3CCE4E02E40695E91B5DEE2EDC65F6 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = SwiftMusings/Classes/extensions/TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		1E90835DA65CFB34510F3AE80E11440A /* Pods-ImageClassification-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageClassification-umbrella.h"; sourceTree = "<group>"; };
 		1F4283D8FC00BF78445B1E7F52FA2ED2 /* Pods-ImageClassification-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImageClassification-frameworks.sh"; sourceTree = "<group>"; };
-		22485F66FBEAA2BF9667556DDDFE42F0 /* ImagePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePickerView.swift; path = SwiftMusings/Classes/swiftUI/ImagePickerView.swift; sourceTree = "<group>"; };
-		3449340D426BE64BB1674A42CE9ED8AB /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = SwiftMusings/Classes/utils/AudioManager.swift; sourceTree = "<group>"; };
-		3913865AF6362EE05A914DAD5B7A160C /* SwiftMusings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMusings.modulemap; sourceTree = "<group>"; };
-		43B1EBC9FDE9732F97797AF2CC1E11A2 /* FaceVisionClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceVisionClassifier.swift; path = SwiftMusings/Classes/coreMl/FaceVisionClassifier.swift; sourceTree = "<group>"; };
-		4560EA003748D2EAB2E6549617A5CF15 /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = SwiftMusings/Classes/extensions/CIImageExtension.swift; sourceTree = "<group>"; };
+		27CBF5F00797BACCA1253261CD75F57A /* FileManagerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = SwiftMusings/Classes/extensions/FileManagerExtension.swift; sourceTree = "<group>"; };
+		29A856946A628905A9A8ED73C4CEF35B /* ImageClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageClassifier.swift; path = SwiftMusings/Classes/coreMl/ImageClassifier.swift; sourceTree = "<group>"; };
+		2AC4C7AFBD44B2B9EA840600DEE4B54E /* SwiftMusings-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMusings-Info.plist"; sourceTree = "<group>"; };
 		52F615E91FED70945634B5055D5C1296 /* Pods-ImageClassification-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageClassification-acknowledgements.plist"; sourceTree = "<group>"; };
-		550840A020FDF73B4AAAD8EC7B8A65E3 /* FilterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilterManager.swift; path = SwiftMusings/Classes/utils/FilterManager.swift; sourceTree = "<group>"; };
-		5610B26C5AD1BAC00901B6386C8BF593 /* CodeScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeScannerView.swift; path = SwiftMusings/Classes/swiftUI/CodeScannerView.swift; sourceTree = "<group>"; };
-		5CC20E42C6153DF93BCBFFFF88607449 /* SwiftMusings-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMusings-Info.plist"; sourceTree = "<group>"; };
+		534CDF82A57FC5EED13725CAE84BB78F /* SwiftMusings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMusings-dummy.m"; sourceTree = "<group>"; };
+		5AE9959F7F3FFA5BDF0B849578E04716 /* FaceVisionClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaceVisionClassifier.swift; path = SwiftMusings/Classes/coreMl/FaceVisionClassifier.swift; sourceTree = "<group>"; };
+		5BFECDD04A2EBB968AF150B50E3C3340 /* AudioClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioClassifier.swift; path = SwiftMusings/Classes/coreMl/AudioClassifier.swift; sourceTree = "<group>"; };
+		630825D90BE466A4F9BFF9D65F05FC9C /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = SwiftMusings/Classes/utils/AudioManager.swift; sourceTree = "<group>"; };
+		63DA4C3ADF803241E3FDB172EDDA6563 /* PermissionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionManager.swift; path = SwiftMusings/Classes/utils/PermissionManager.swift; sourceTree = "<group>"; };
+		6601F195191226E10373A579830F3E73 /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SwiftMusings/Classes/extensions/UIImageExtension.swift; sourceTree = "<group>"; };
+		6C320D3C95E2185E40C41F66D3B0CE28 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtension.swift; path = SwiftMusings/Classes/extensions/UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		70DDA64261CC891453FAF6A6EF1AB03C /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = SwiftMusings/Classes/extensions/CIImageExtension.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		758FDEB5DC9A7A811E729D67CDBD5E84 /* TextClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextClassifier.swift; path = SwiftMusings/Classes/coreMl/TextClassifier.swift; sourceTree = "<group>"; };
 		78CCC890CBA9A56498FB32247B22C761 /* Pods-ImageClassification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageClassification.debug.xcconfig"; sourceTree = "<group>"; };
-		7A17E88317C873A34058A095B0D7FF82 /* PermissionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionManager.swift; path = SwiftMusings/Classes/utils/PermissionManager.swift; sourceTree = "<group>"; };
-		7C18BCC0E3D3B107E32A7DE56C0583BE /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = SwiftMusings/Classes/extensions/TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		7EB6CD8A9C91E19B0F2F3D131EB7F112 /* SwiftMusings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-umbrella.h"; sourceTree = "<group>"; };
+		7F5D028B6B74F7F44235CDA1D755EEBA /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = SwiftMusings/Classes/extensions/UIViewExtension.swift; sourceTree = "<group>"; };
 		810B79D2746F6E800C64025E2985970F /* Pods-ImageClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageClassification.release.xcconfig"; sourceTree = "<group>"; };
-		82EA7E1E7404F93E2532C652B076C4AB /* SwiftMusings-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-prefix.pch"; sourceTree = "<group>"; };
-		8893BA4102EB94D5412C7DDC092C3C60 /* CustomError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomError.swift; path = SwiftMusings/Classes/utils/CustomError.swift; sourceTree = "<group>"; };
+		8566F69624996CE8250D485C790FFB2F /* SwiftMusings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMusings.modulemap; sourceTree = "<group>"; };
+		86149C3FD9555A298435754B1F4C4614 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftMusings/Classes/utils/Utils.swift; sourceTree = "<group>"; };
 		8A43ECBEEC2CE113A7176A7C87B22927 /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ImageClassification.framework; path = "Pods-ImageClassification.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97FC645F830D69507309669778D513B7 /* SwiftMusings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.release.xcconfig; sourceTree = "<group>"; };
+		8B0AD305734BEFDB9AEC3AE368862300 /* SwiftMusings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.debug.xcconfig; sourceTree = "<group>"; };
+		991D03B3FF150D09E6FF4794628089D6 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = SwiftMusings/Classes/extensions/UIImageViewExtension.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EE0BDA4453450301D8601E3CC706F80 /* AudioClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioClassifier.swift; path = SwiftMusings/Classes/coreMl/AudioClassifier.swift; sourceTree = "<group>"; };
-		A2EE3BA11BAE399B4A80B12DF0D23A7C /* SwiftMusings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMusings-dummy.m"; sourceTree = "<group>"; };
-		A5F0923B43616BA80ADB4CE4CD821A6C /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SwiftMusings/Classes/extensions/UIImageExtension.swift; sourceTree = "<group>"; };
-		A9AF9DDE3395847DCB872B6A4DD18691 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtension.swift; path = SwiftMusings/Classes/extensions/UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		A0D5B4EFC14678BCC3ACEDFD8998D8A8 /* CustomError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomError.swift; path = SwiftMusings/Classes/utils/CustomError.swift; sourceTree = "<group>"; };
+		A7135A68CE0EB268E85974D1E3EF6F6F /* CodeScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeScannerView.swift; path = SwiftMusings/Classes/swiftUI/CodeScannerView.swift; sourceTree = "<group>"; };
 		AAC60F3066B841084C4DA7F043B721EC /* SwiftMusings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMusings.framework; path = SwiftMusings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AADA0F8E4DBC8BEC2A1198EF4621C63C /* SwiftMusings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-umbrella.h"; sourceTree = "<group>"; };
-		BD823B6062943CD058B01A6697B9C89E /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = SwiftMusings/Classes/extensions/UIViewExtension.swift; sourceTree = "<group>"; };
+		B175E687B352947800024B18FFC014E7 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftMusings/Classes/extensions/StringExtension.swift; sourceTree = "<group>"; };
+		B56FA036CCA55EC748CF5A5A7755072F /* AVPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVPlayerView.swift; path = SwiftMusings/Classes/swiftUI/AVPlayerView.swift; sourceTree = "<group>"; };
+		C017D498ABC663C543F166C270AD232B /* SwiftMusings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMusings.release.xcconfig; sourceTree = "<group>"; };
 		C11403E204235F9F9A4C207623B0AFD8 /* Pods-ImageClassification-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageClassification-Info.plist"; sourceTree = "<group>"; };
-		D8AE5DFD96F8752696A1FC7DBB6CB09C /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftMusings/Classes/extensions/StringExtension.swift; sourceTree = "<group>"; };
-		DA47811A2AD52BC065E8152C0C497F44 /* AVPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVPlayerView.swift; path = SwiftMusings/Classes/swiftUI/AVPlayerView.swift; sourceTree = "<group>"; };
+		C200723F90DB0AA2F675B25366EF11D7 /* ImageVisionClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageVisionClassifier.swift; path = SwiftMusings/Classes/coreMl/ImageVisionClassifier.swift; sourceTree = "<group>"; };
 		DAA03814E767784D9E437F92DAF079FD /* Pods-ImageClassification-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImageClassification-dummy.m"; sourceTree = "<group>"; };
-		ECC6BA44FB0705ED7A20A8C0EACEB163 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftMusings/Classes/utils/Utils.swift; sourceTree = "<group>"; };
+		ED97E8017D67B885AC002393503B8C6B /* SwiftMusings-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMusings-prefix.pch"; sourceTree = "<group>"; };
 		EE11FBCD1C1FADC433EE7B0464B97A3A /* Pods-ImageClassification.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ImageClassification.modulemap"; sourceTree = "<group>"; };
-		EFA267DEE9DB38BFF38B30D59AE4071A /* test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = test.swift; path = SwiftMusings/Classes/coreMl/test.swift; sourceTree = "<group>"; };
-		FC2146671916D06FDF0946F99CD3F29F /* ImageVisionClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageVisionClassifier.swift; path = SwiftMusings/Classes/coreMl/ImageVisionClassifier.swift; sourceTree = "<group>"; };
+		F9C3950BF8C1A6750494642335E55DC5 /* FilterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilterManager.swift; path = SwiftMusings/Classes/utils/FilterManager.swift; sourceTree = "<group>"; };
+		FE432015001FB7ADB2E10418BD259B32 /* CodeClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeClassifier.swift; path = SwiftMusings/Classes/coreMl/CodeClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7FF4A14D042C0BE2D6BF1AF690B2C771 /* Frameworks */ = {
+		3A32F51261CBB8B8FA437BEF3A3095E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3D6B27F9521A795452F4A71B7BB5A9 /* Foundation.framework in Frameworks */,
+				7722B83AB11B431BCD8A94651FE730B2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		786F56103CA6D06DE2C825C1CC1E8BD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F19B2CAB3404C24E8537ECDC4F1BB0A /* SwiftMusings */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D3852611D873ECDD726A7A81EE4B24F /* Pods-ImageClassification */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +166,37 @@
 			path = "Target Support Files/Pods-ImageClassification";
 			sourceTree = "<group>";
 		};
-		B6DD9B7924ECAFF0D3B2D348888FBCA7 /* Pods */ = {
+		9F19B2CAB3404C24E8537ECDC4F1BB0A /* SwiftMusings */ = {
 			isa = PBXGroup;
 			children = (
-				F60A9A1F0A8C93D4404E090037E2B930 /* SwiftMusings */,
+				5BFECDD04A2EBB968AF150B50E3C3340 /* AudioClassifier.swift */,
+				630825D90BE466A4F9BFF9D65F05FC9C /* AudioManager.swift */,
+				B56FA036CCA55EC748CF5A5A7755072F /* AVPlayerView.swift */,
+				70DDA64261CC891453FAF6A6EF1AB03C /* CIImageExtension.swift */,
+				FE432015001FB7ADB2E10418BD259B32 /* CodeClassifier.swift */,
+				A7135A68CE0EB268E85974D1E3EF6F6F /* CodeScannerView.swift */,
+				A0D5B4EFC14678BCC3ACEDFD8998D8A8 /* CustomError.swift */,
+				5AE9959F7F3FFA5BDF0B849578E04716 /* FaceVisionClassifier.swift */,
+				27CBF5F00797BACCA1253261CD75F57A /* FileManagerExtension.swift */,
+				F9C3950BF8C1A6750494642335E55DC5 /* FilterManager.swift */,
+				29A856946A628905A9A8ED73C4CEF35B /* ImageClassifier.swift */,
+				0690F610B5B318AF56C2EEDEE266B032 /* ImagePickerView.swift */,
+				C200723F90DB0AA2F675B25366EF11D7 /* ImageVisionClassifier.swift */,
+				63DA4C3ADF803241E3FDB172EDDA6563 /* PermissionManager.swift */,
+				B175E687B352947800024B18FFC014E7 /* StringExtension.swift */,
+				758FDEB5DC9A7A811E729D67CDBD5E84 /* TextClassifier.swift */,
+				0C3CCE4E02E40695E91B5DEE2EDC65F6 /* TimeIntervalExtension.swift */,
+				6C320D3C95E2185E40C41F66D3B0CE28 /* UIBarButtonItemExtension.swift */,
+				035C41A1CB91BCC02E58291954F2D820 /* UIButtonExtension.swift */,
+				6601F195191226E10373A579830F3E73 /* UIImageExtension.swift */,
+				991D03B3FF150D09E6FF4794628089D6 /* UIImageViewExtension.swift */,
+				0C2FABF871952F02D4B9ECE0AE325E63 /* UITabBarItemExtension.swift */,
+				7F5D028B6B74F7F44235CDA1D755EEBA /* UIViewExtension.swift */,
+				86149C3FD9555A298435754B1F4C4614 /* Utils.swift */,
+				FAD54382FBCAFA80ED3DD4ACFF8D1F66 /* Support Files */,
 			);
-			name = Pods;
+			name = SwiftMusings;
+			path = SwiftMusings;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -167,7 +204,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				B6DD9B7924ECAFF0D3B2D348888FBCA7 /* Pods */,
+				786F56103CA6D06DE2C825C1CC1E8BD2 /* Pods */,
 				5F0822DA1E8A4FD910637923B5ADE990 /* Products */,
 				76B821763F1444C3C1D5DC3AED4B072F /* Targets Support Files */,
 			);
@@ -181,50 +218,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F2B904CE7397CE1789EF0CD5B5EF5F18 /* Support Files */ = {
+		FAD54382FBCAFA80ED3DD4ACFF8D1F66 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3913865AF6362EE05A914DAD5B7A160C /* SwiftMusings.modulemap */,
-				A2EE3BA11BAE399B4A80B12DF0D23A7C /* SwiftMusings-dummy.m */,
-				5CC20E42C6153DF93BCBFFFF88607449 /* SwiftMusings-Info.plist */,
-				82EA7E1E7404F93E2532C652B076C4AB /* SwiftMusings-prefix.pch */,
-				AADA0F8E4DBC8BEC2A1198EF4621C63C /* SwiftMusings-umbrella.h */,
-				0D882BA3BAC8847AB74A407553B76EB9 /* SwiftMusings.debug.xcconfig */,
-				97FC645F830D69507309669778D513B7 /* SwiftMusings.release.xcconfig */,
+				8566F69624996CE8250D485C790FFB2F /* SwiftMusings.modulemap */,
+				534CDF82A57FC5EED13725CAE84BB78F /* SwiftMusings-dummy.m */,
+				2AC4C7AFBD44B2B9EA840600DEE4B54E /* SwiftMusings-Info.plist */,
+				ED97E8017D67B885AC002393503B8C6B /* SwiftMusings-prefix.pch */,
+				7EB6CD8A9C91E19B0F2F3D131EB7F112 /* SwiftMusings-umbrella.h */,
+				8B0AD305734BEFDB9AEC3AE368862300 /* SwiftMusings.debug.xcconfig */,
+				C017D498ABC663C543F166C270AD232B /* SwiftMusings.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftMusings";
-			sourceTree = "<group>";
-		};
-		F60A9A1F0A8C93D4404E090037E2B930 /* SwiftMusings */ = {
-			isa = PBXGroup;
-			children = (
-				9EE0BDA4453450301D8601E3CC706F80 /* AudioClassifier.swift */,
-				3449340D426BE64BB1674A42CE9ED8AB /* AudioManager.swift */,
-				DA47811A2AD52BC065E8152C0C497F44 /* AVPlayerView.swift */,
-				4560EA003748D2EAB2E6549617A5CF15 /* CIImageExtension.swift */,
-				5610B26C5AD1BAC00901B6386C8BF593 /* CodeScannerView.swift */,
-				8893BA4102EB94D5412C7DDC092C3C60 /* CustomError.swift */,
-				43B1EBC9FDE9732F97797AF2CC1E11A2 /* FaceVisionClassifier.swift */,
-				174867159D5D0B43C73687EA5B894F40 /* FileManagerExtension.swift */,
-				550840A020FDF73B4AAAD8EC7B8A65E3 /* FilterManager.swift */,
-				22485F66FBEAA2BF9667556DDDFE42F0 /* ImagePickerView.swift */,
-				FC2146671916D06FDF0946F99CD3F29F /* ImageVisionClassifier.swift */,
-				7A17E88317C873A34058A095B0D7FF82 /* PermissionManager.swift */,
-				D8AE5DFD96F8752696A1FC7DBB6CB09C /* StringExtension.swift */,
-				EFA267DEE9DB38BFF38B30D59AE4071A /* test.swift */,
-				7C18BCC0E3D3B107E32A7DE56C0583BE /* TimeIntervalExtension.swift */,
-				A9AF9DDE3395847DCB872B6A4DD18691 /* UIBarButtonItemExtension.swift */,
-				1AD59B52E9A392BC4059251C1963B9A0 /* UIButtonExtension.swift */,
-				A5F0923B43616BA80ADB4CE4CD821A6C /* UIImageExtension.swift */,
-				135B3C4FEB6FC076937BA2A7231C3045 /* UIImageViewExtension.swift */,
-				0AF19CC5C890E8D2D60DC6656A83138D /* UITabBarItemExtension.swift */,
-				BD823B6062943CD058B01A6697B9C89E /* UIViewExtension.swift */,
-				ECC6BA44FB0705ED7A20A8C0EACEB163 /* Utils.swift */,
-				F2B904CE7397CE1789EF0CD5B5EF5F18 /* Support Files */,
-			);
-			name = SwiftMusings;
-			path = SwiftMusings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +244,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9970C09DC8A44D14F21A06D977B4BCF /* Headers */ = {
+		F7DD5453B4127C2A28C475D58EAF98BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D77A4465C3F1133DED3EB5ED6AF75E /* SwiftMusings-umbrella.h in Headers */,
+				7457801389B91F80DE7B4CBB9AEB3827 /* SwiftMusings-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +267,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				CD6ABC3C0CEBDD80162CFF34A0A2E9AA /* PBXTargetDependency */,
+				9C9A2F2422A15AA194134F49E2FC3249 /* PBXTargetDependency */,
 			);
 			name = "Pods-ImageClassification";
 			productName = "Pods-ImageClassification";
@@ -270,12 +276,12 @@
 		};
 		AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBE3C362656BC6D32B2BADEB74C39205 /* Build configuration list for PBXNativeTarget "SwiftMusings" */;
+			buildConfigurationList = A81081AC6F74F79BFBB66F9E9DE72BB6 /* Build configuration list for PBXNativeTarget "SwiftMusings" */;
 			buildPhases = (
-				D9970C09DC8A44D14F21A06D977B4BCF /* Headers */,
-				0BBDE5FA3F5F5A532063ED71AA28D542 /* Sources */,
-				7FF4A14D042C0BE2D6BF1AF690B2C771 /* Frameworks */,
-				EF50DFDE428D2D9DD0A9F1C0DEA5C37A /* Resources */,
+				F7DD5453B4127C2A28C475D58EAF98BB /* Headers */,
+				8368834415B5BF579853A3E4C28F0EEB /* Sources */,
+				3A32F51261CBB8B8FA437BEF3A3095E3 /* Frameworks */,
+				E9677E934E569404D1DC642C4380C842 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -322,7 +328,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF50DFDE428D2D9DD0A9F1C0DEA5C37A /* Resources */ = {
+		E9677E934E569404D1DC642C4380C842 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,36 +338,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0BBDE5FA3F5F5A532063ED71AA28D542 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4717E5BCE3FB87673B88568D519100B4 /* AudioClassifier.swift in Sources */,
-				78AF229C39284AFBADDF251BDCB7B931 /* AudioManager.swift in Sources */,
-				B4CCAA6724449B2EFD2359656F1DFBC0 /* AVPlayerView.swift in Sources */,
-				5B562C1975D14BABFB162EC50246EC7D /* CIImageExtension.swift in Sources */,
-				ED6101FB3AB518D302D51EDF8EBBC328 /* CodeScannerView.swift in Sources */,
-				407229344B66EC87F0AE4383AE2D6192 /* CustomError.swift in Sources */,
-				E6814C3095323C1A5399AC79026C936B /* FaceVisionClassifier.swift in Sources */,
-				E580C81623582FB2BB267F02067334BB /* FileManagerExtension.swift in Sources */,
-				21BD2B8F0721FCA8736E0E5DA713CF4E /* FilterManager.swift in Sources */,
-				C998C79F7F2087D42C55FB326F6AC4D7 /* ImagePickerView.swift in Sources */,
-				DD7E9CE19EBE57FDD2F23721AD9937FE /* ImageVisionClassifier.swift in Sources */,
-				B4F023304BE4F9C658D1CB71A271CA26 /* PermissionManager.swift in Sources */,
-				462CD7C205C5E635A98F244AA94F5C90 /* StringExtension.swift in Sources */,
-				E90AB743C3E84BAD22CDE7A2C9BC7375 /* SwiftMusings-dummy.m in Sources */,
-				360B11C95ACD3D557EDAAD8A430B80BE /* test.swift in Sources */,
-				A4FB9E6685E92850F8614A483E4B5CBE /* TimeIntervalExtension.swift in Sources */,
-				EAFFC331C9083D88DE1BBACF56B67345 /* UIBarButtonItemExtension.swift in Sources */,
-				4BB57D5D4FBA1833294C7F7C554BC6F7 /* UIButtonExtension.swift in Sources */,
-				CF695603846A75E37AFE812FC294F111 /* UIImageExtension.swift in Sources */,
-				8D19D7D737C34FA28E3702EA3254287B /* UIImageViewExtension.swift in Sources */,
-				B61D071DD3988B6CDDFA212FAFF5C518 /* UITabBarItemExtension.swift in Sources */,
-				640DC2000E4BFBBCFAAF2FC90CDAF443 /* UIViewExtension.swift in Sources */,
-				1FCA8E2AAC9D16C03C72A9F9CEE64A11 /* Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1345B8D3D95BF1415D889FDF56E0B6FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,21 +346,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8368834415B5BF579853A3E4C28F0EEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				563E4E9DFFF88F80C0E199BC1436D90C /* AudioClassifier.swift in Sources */,
+				F4E0466E3B4B04C838061750A7F87808 /* AudioManager.swift in Sources */,
+				A8ABB83CE57CE62466D8E0DD79351EF3 /* AVPlayerView.swift in Sources */,
+				06D4E79F63A300B6E8A727B3649E3AE7 /* CIImageExtension.swift in Sources */,
+				2AA8210F605842ECBE5D321C0B700D97 /* CodeClassifier.swift in Sources */,
+				D803DE6793C232BE7A4CDDDB407A309C /* CodeScannerView.swift in Sources */,
+				D54AA55AFE91CE8EFCA01CF37FFE2B60 /* CustomError.swift in Sources */,
+				BCF8B41570763509D0634B30D48EA531 /* FaceVisionClassifier.swift in Sources */,
+				824B435DA25A8B0E1FB2C6906856DCCA /* FileManagerExtension.swift in Sources */,
+				80C2ACD12CEA0FA0BEA114337E41BC30 /* FilterManager.swift in Sources */,
+				E6C4D01DD675D1ED4B4D466D57E9CF4C /* ImageClassifier.swift in Sources */,
+				39118E8ABC1AE8F97A15DB2A1EF2A833 /* ImagePickerView.swift in Sources */,
+				FA47137655540357CE109F95095558E3 /* ImageVisionClassifier.swift in Sources */,
+				E02F4373DF7EC8ACE80887B319DAC830 /* PermissionManager.swift in Sources */,
+				6DD919925CE003A2EDCEF0C370B019CD /* StringExtension.swift in Sources */,
+				683C77D80CE5440A9A2684CA52CA2396 /* SwiftMusings-dummy.m in Sources */,
+				38C4212007047174F62DE56A80DDEBBD /* TextClassifier.swift in Sources */,
+				8F7B4D2A13F2FF334A3CBC72155878D5 /* TimeIntervalExtension.swift in Sources */,
+				900A92C982FF3DF709F5D135552DCCD1 /* UIBarButtonItemExtension.swift in Sources */,
+				2D182FD73A4188ABFF6963C79BF7F2EF /* UIButtonExtension.swift in Sources */,
+				AA2C69DA0988E9FC30F415F7D8488A81 /* UIImageExtension.swift in Sources */,
+				CBACBD8C4F9A6D1690179B01C06DF6FD /* UIImageViewExtension.swift in Sources */,
+				80E38290445B72961653571671A9B4AD /* UITabBarItemExtension.swift in Sources */,
+				16A93759BE7A4F335F57E93548F19B4F /* UIViewExtension.swift in Sources */,
+				15786E1C7294CABC562AAE1D6A3B8B88 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD6ABC3C0CEBDD80162CFF34A0A2E9AA /* PBXTargetDependency */ = {
+		9C9A2F2422A15AA194134F49E2FC3249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftMusings;
 			target = AF76B2DC247CC73A762B71FAF828F9DC /* SwiftMusings */;
-			targetProxy = 9A4053AB05E1FB2380C1D91D158E51BE /* PBXContainerItemProxy */;
+			targetProxy = A906713A84A300D389876BA627DCD895 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FB10E8266B13A5B4219E78B38930BCE /* Release */ = {
+		193508988D284BD4B2728D36DB9C30F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97FC645F830D69507309669778D513B7 /* SwiftMusings.release.xcconfig */;
+			baseConfigurationReference = C017D498ABC663C543F166C270AD232B /* SwiftMusings.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -481,9 +489,9 @@
 			};
 			name = Debug;
 		};
-		814EED1613623EDACA881E5267A80D4F /* Debug */ = {
+		60A0C8433DB98ED07C18C69CBFAA80A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D882BA3BAC8847AB74A407553B76EB9 /* SwiftMusings.debug.xcconfig */;
+			baseConfigurationReference = 8B0AD305734BEFDB9AEC3AE368862300 /* SwiftMusings.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -665,11 +673,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBE3C362656BC6D32B2BADEB74C39205 /* Build configuration list for PBXNativeTarget "SwiftMusings" */ = {
+		A81081AC6F74F79BFBB66F9E9DE72BB6 /* Build configuration list for PBXNativeTarget "SwiftMusings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				814EED1613623EDACA881E5267A80D4F /* Debug */,
-				0FB10E8266B13A5B4219E78B38930BCE /* Release */,
+				60A0C8433DB98ED07C18C69CBFAA80A3 /* Debug */,
+				193508988D284BD4B2728D36DB9C30F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

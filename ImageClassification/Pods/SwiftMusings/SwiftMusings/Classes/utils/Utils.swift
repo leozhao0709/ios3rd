@@ -12,10 +12,10 @@ import Foundation
  
  - parameter format: Log String
  */
-public func printLog(_ item: Any, fileName: String = #file, lineNumber: Int = #line, columnNumber: Int = #column) {
+public func printLog(_ message: Any, fileName: String = #file, lineNumber: Int = #line, columnNumber: Int = #column) {
     #if DEBUG
         
-        NSLog("\((fileName as NSString).lastPathComponent)[\(lineNumber):\(columnNumber)]: \(item)")
+        NSLog("\((fileName as NSString).lastPathComponent)[\(lineNumber):\(columnNumber)]: \(message)")
     #endif
 }
 

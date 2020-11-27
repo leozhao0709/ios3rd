@@ -4,17 +4,17 @@
 
 import Foundation
 
-struct CustomError: LocalizedError {
-    var errorDescription: String? {
+public struct CustomError: LocalizedError {
+    public var errorDescription: String? {
         _description
     }
-    var failureReason: String? {
+    public var failureReason: String? {
         _description
     }
 
     private var _description: String
 
-    init(_ description: String) {
+    public init(_ description: String) {
         self._description = description
     }
 }

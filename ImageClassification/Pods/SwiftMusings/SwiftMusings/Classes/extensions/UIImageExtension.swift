@@ -896,13 +896,12 @@ extension UIImage {
       fromURL url: String,
       shouldCacheImage: Bool? = true,
       placeholder: UIImage? = nil,
-      onSuccess: ((_ image: UIImage?) -> Void)? = nil,
-      onError: ((_ err: Error) -> Void)?
+      onComplete: ((_ image: UIImage?, _ error: Error?) -> Void)?
     ) -> UIImage? {
         // From Cache
         if shouldCacheImage != nil && shouldCacheImage! {
             if let image = UIImage.shared.object(forKey: url as AnyObject) as? UIImage {
-                onSuccess?(image)
+                onComplete?(image, nil)
                 return image
             }
         }
@@ -912,7 +911,7 @@ extension UIImage {
             session.dataTask(with: nsURL, completionHandler: { (data, response, error) -> Void in
                 if let error = error {
                     DispatchQueue.main.async {
-                        onError?(error)
+                        onComplete?(nil, error)
                     }
                 }
                 if let data = data, let image = UIImage(data: data) {
@@ -920,10 +919,10 @@ extension UIImage {
                         UIImage.shared.setObject(image, forKey: url as AnyObject)
                     }
                     DispatchQueue.main.async {
-                        onSuccess?(image)
+                        onComplete?(image, nil)
                     }
                 } else {
-                    onError?(CustomError("url data is not an image"))
+                    onComplete?(nil, CustomError("url data is not an image"))
                 }
                 session.finishTasksAndInvalidate()
             }).resume()
@@ -936,8 +935,8 @@ extension UIImage {
 @available(macCatalyst 13.0, *)
 extension UIImage {
 
-    public func addVNFaceObservation(
-      observations: [VNFaceObservation],
+    public func addVNDetectedObjectObservation(
+      observations: [VNDetectedObjectObservation],
       color: UIColor = .red,
       lineWidth: CGFloat = 5.0
     ) -> UIImage? {

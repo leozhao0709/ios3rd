@@ -48,4 +48,5 @@ class AudioClassifierObserver: NSObject, SNResultsObserving {
 
         onComplete?(results.classifications, nil)
     }
+
 }

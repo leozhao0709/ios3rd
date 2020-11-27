@@ -31,16 +31,28 @@ struct ContentView: View {
                 Image(uiImage: UIImage(BarcodeString: "\(name)\n\(phone)") ?? UIImage())
                 Spacer()
             }
+              .onAppear {
+                  let codeClassifier = CodeClassifier()
+                  codeClassifier.extractCode(UIImage(BarcodeString: "\(name)\n\(phone)") ?? UIImage()) { observations, error in
+                      if error != nil {
+                          printLog(error?.localizedDescription)
+                          return
+                      }
+                     for observation in observations {
+                         printLog(observation.payloadStringValue)
+                     }
+                  }
+              }
               .navigationBarTitle("My QRcode")
               .navigationBarItems(trailing: Button("扫一扫") {
                   self.showSheet.toggle()
               })
         }
           .sheet(isPresented: $showSheet) {
-              CodeScannerView(onGetCodes: { codes in
+              CodeScannerView(onGetCodes: { codes, error in
                   self.showSheet.toggle()
                   print(".....codes...", codes)
-              }, onError: nil)
+              })
           }
     }
 

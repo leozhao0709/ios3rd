@@ -67,11 +67,25 @@ struct ContentView: View {
 //                      printLog(error.localizedDescription)
 //                  })
 
-              let faceVisionClassifier = FaceVisionClassifier()
-                faceVisionClassifier.detectFaces(image: image, onComplete: { img, observations in
-                    self.uiImage = img
-                    print("\(observations.count)")
-                }, onError: nil)
+//                  let faceVisionClassifier = FaceVisionClassifier()
+//                  faceVisionClassifier.detectFaces(image: image) { img, observations, error in
+//                      if error != nil {
+//                          printLog(error?.localizedDescription)
+//                          return
+//                      }
+//
+//                      self.uiImage = img
+//                      print("\(observations.count)")
+//                  }
+
+              let textClassifier = TextClassifier()
+                  textClassifier.detect(image) { img, observations, error in
+                      if error != nil {
+                          printLog(error?.localizedDescription)
+                          return
+                      }
+                      self.uiImage = img
+                  }
 
               }, onPickVideo: nil, onCancelPick: {
                   self.showSheet.toggle()
