@@ -2,7 +2,8 @@
 //  DesignCodeApp.swift
 //  DesignCode
 //
-//  Created by Lei Zhao on 5/1/21.
+//  Created by Lei Zhao on 5/2/21.
+//
 //
 
 import SwiftUI
@@ -13,5 +14,21 @@ struct DesignCodeApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+
+    init() {
+        loadInjectionIIIInDebug()
+    }
+
+    func loadInjectionIIIInDebug() {
+        #if DEBUG
+            var injectionBundlePath = "/Applications/InjectionIII.app/Contents/Resources"
+            #if targetEnvironment(macCatalyst)
+                injectionBundlePath = "\(injectionBundlePath)/macOSInjection.bundle"
+            #elseif os(iOS)
+                injectionBundlePath = "\(injectionBundlePath)/iOSInjection.bundle"
+            #endif
+            Bundle(path: injectionBundlePath)?.load()
+        #endif
     }
 }
