@@ -18,6 +18,7 @@ struct MenuRow: View {
               .font(.system(size: 20, weight: .light))
               .imageScale(.large)
               .frame(width: 32, height: 32)
+                .foregroundColor(Color(#colorLiteral(red: 0.662745098, green: 0.7333333333, blue: 0.831372549, alpha: 1)))
             Text(title)
               .font(.system(size: 20, weight: .bold, design: .default))
               .frame(width: 120, alignment: .leading)

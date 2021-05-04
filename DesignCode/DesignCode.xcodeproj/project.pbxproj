@@ -17,10 +17,12 @@
 		37B218E4B3092906D2D18D86 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21E5DB0884C88155A1B2C /* BackCardView.swift */; };
 		37B2197A5E7E5920675240DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2102CF66905DA7060E34E /* CardView.swift */; };
 		37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21AA0434ADE3B0607C332 /* MenuRow.swift */; };
+		37B21C0D70D4203051FF4AD9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2108D3CF7FBDDBFFAA02E /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37B2102CF66905DA7060E34E /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		37B2108D3CF7FBDDBFFAA02E /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		37B210FCFA63B97296E9F5BF /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		37B211739C1CB74B832E4F05 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		37B214F8AD32A962A798154F /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		37B21266637C96DC2085DA81 /* DesignCode */ = {
 			isa = PBXGroup;
 			children = (
+				D42B293A2640DCC50073C4AE /* Home */,
 				37B21B9B3DF26EB199594FAB /* Info.plist */,
 				37B2176E965AAAC46B936118 /* Assets.xcassets */,
 				37B21FC006553A4B7502CF8A /* Preview Content */,
@@ -80,6 +83,14 @@
 				37B2151097E6D6349C6F1595 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D42B293A2640DCC50073C4AE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				37B2108D3CF7FBDDBFFAA02E /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		D4676A6D2640C6A9009E9F02 /* Card */ = {
@@ -173,6 +184,7 @@
 				37B2134F0A2D668902B63EAF /* BottomCardView.swift in Sources */,
 				37B2158B28CB6F6E48EBE576 /* MenuView.swift in Sources */,
 				37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */,
+				37B21C0D70D4203051FF4AD9 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
