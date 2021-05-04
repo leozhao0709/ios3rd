@@ -9,20 +9,24 @@
 /* Begin PBXBuildFile section */
 		37B212E81E32BD51B800DFC4 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B210FCFA63B97296E9F5BF /* TitleView.swift */; };
 		37B2134F0A2D668902B63EAF /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21E0B604003A0B253C32B /* BottomCardView.swift */; };
+		37B2158B28CB6F6E48EBE576 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B211739C1CB74B832E4F05 /* MenuView.swift */; };
 		37B215AE4A2B4AB115F42444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B2176E965AAAC46B936118 /* Assets.xcassets */; };
 		37B215EC5F8C0A0D76430EA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B2151097E6D6349C6F1595 /* Preview Assets.xcassets */; };
 		37B216BF670B7BD2B3007656 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21F12406CD18F8E7023B6 /* ContentView.swift */; };
 		37B218376F19AA87A99E32E3 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B214F8AD32A962A798154F /* DesignCodeApp.swift */; };
 		37B218E4B3092906D2D18D86 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21E5DB0884C88155A1B2C /* BackCardView.swift */; };
 		37B2197A5E7E5920675240DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2102CF66905DA7060E34E /* CardView.swift */; };
+		37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21AA0434ADE3B0607C332 /* MenuRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37B2102CF66905DA7060E34E /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		37B210FCFA63B97296E9F5BF /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		37B211739C1CB74B832E4F05 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		37B214F8AD32A962A798154F /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
 		37B2151097E6D6349C6F1595 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37B2176E965AAAC46B936118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37B21AA0434ADE3B0607C332 /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		37B21B9B3DF26EB199594FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		37B21BFCD58C9CAF3C57FBD1 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B21E0B604003A0B253C32B /* BottomCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
@@ -48,11 +52,8 @@
 				37B2176E965AAAC46B936118 /* Assets.xcassets */,
 				37B21FC006553A4B7502CF8A /* Preview Content */,
 				37B214F8AD32A962A798154F /* DesignCodeApp.swift */,
-				37B21F12406CD18F8E7023B6 /* ContentView.swift */,
-				37B2102CF66905DA7060E34E /* CardView.swift */,
-				37B21E5DB0884C88155A1B2C /* BackCardView.swift */,
-				37B210FCFA63B97296E9F5BF /* TitleView.swift */,
-				37B21E0B604003A0B253C32B /* BottomCardView.swift */,
+				D4676A6E2640C754009E9F02 /* Menu */,
+				D4676A6D2640C6A9009E9F02 /* Card */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -81,6 +82,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D4676A6D2640C6A9009E9F02 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				37B210FCFA63B97296E9F5BF /* TitleView.swift */,
+				37B21E0B604003A0B253C32B /* BottomCardView.swift */,
+				37B21F12406CD18F8E7023B6 /* ContentView.swift */,
+				37B2102CF66905DA7060E34E /* CardView.swift */,
+				37B21E5DB0884C88155A1B2C /* BackCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		D4676A6E2640C754009E9F02 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				37B211739C1CB74B832E4F05 /* MenuView.swift */,
+				37B21AA0434ADE3B0607C332 /* MenuRow.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,11 +128,14 @@
 /* Begin PBXProject section */
 		37B213F056056EB2AAE27FD7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 37B21EA2C435BDF343D897BD /* Build configuration list for PBXProject "DesignCode" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 37B2131F12B0A6C472466046;
@@ -146,6 +171,8 @@
 				37B218E4B3092906D2D18D86 /* BackCardView.swift in Sources */,
 				37B212E81E32BD51B800DFC4 /* TitleView.swift in Sources */,
 				37B2134F0A2D668902B63EAF /* BottomCardView.swift in Sources */,
+				37B2158B28CB6F6E48EBE576 /* MenuView.swift in Sources */,
+				37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +289,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -312,6 +338,7 @@
 				37B21EC34D30095F7AC10B25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37B21EA2C435BDF343D897BD /* Build configuration list for PBXProject "DesignCode" */ = {
 			isa = XCConfigurationList;

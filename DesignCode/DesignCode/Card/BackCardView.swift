@@ -14,7 +14,6 @@ struct BackCardView: View {
     var body: some View {
         Rectangle()
           .fill(color)
-          .frame(width: 300, height: 220)
           .cornerRadius(20)
           .shadow(radius: 20)
     }
