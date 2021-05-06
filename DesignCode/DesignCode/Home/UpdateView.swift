@@ -10,32 +10,48 @@ struct UpdateView: View {
 
     var body: some View {
         NavigationView {
-            List(store.updateItems) { (item: UpdateItem) in
-                NavigationLink(destination: Text(item.text)) {
-                    HStack {
-                        Image(item.image)
-                          .resizable()
-                          .aspectRatio(contentMode: .fit)
-                          .frame(width: 80, height: 80)
-                            .background(Color.black)
-                          .cornerRadius(20)
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(item.title)
-                              .font(.system(size: 20))
-                              .font(.title)
+            List {
+                ForEach(store.updateItems) { (item: UpdateItem) in
+                    NavigationLink(destination: UpdateDetailView(updateItem: item)) {
+                        HStack {
+                            Image(item.image)
+                              .resizable()
+                              .aspectRatio(contentMode: .fit)
+                              .frame(width: 80, height: 80)
+                              .background(Color.black)
+                              .cornerRadius(20)
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(item.title)
+                                  .font(.system(size: 20))
+                                  .font(.title)
 
-                            Text(item.text)
-                                .font(.system(.subheadline))
-                                .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
+                                Text(item.text)
+                                  .font(.system(.subheadline))
+                                  .lineLimit(2)
+                                  .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
 
-                            Text(item.date)
-                                .font(.caption)
+                                Text(item.date)
+                                  .font(.caption)
+                            }
                         }
                     }
                 }
+                  .onDelete { (v: IndexSet) in
+                      store.updateItems.remove(atOffsets: v)
+                  }
+                  .onMove { set, i in
+                      store.updateItems.move(fromOffsets: set, toOffset: i)
+                  }
             }
               .navigationBarTitle("Updates")
+              .navigationBarItems(leading: Button(action: { addUpdateItem() }) {
+                  Image(systemName: "plus")
+              }, trailing: EditButton())
         }
+    }
+
+    func addUpdateItem() {
+        store.updateItems.append(UpdateItem(image: "Card1", title: "New Item", text: "text", date: "Jan 1"))
     }
 }
 

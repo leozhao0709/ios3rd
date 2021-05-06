@@ -77,7 +77,7 @@ struct HomeView: View {
                       .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1)
                 }
                   .sheet(isPresented: $showUpdate) {
-                      ContentView()
+                      UpdateView()
                   }
             }
               .padding(.horizontal)
