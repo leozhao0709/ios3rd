@@ -12,6 +12,7 @@ struct HomeView: View {
 
     @State var showProfile = false
     @State(initialValue: CGSize.zero) var viewState
+    @State var showUpdate = false
     let sectionData = [
         Section(title: "Prototype designs in SwiftUI", text: "18 sections", logo: "Logo1", image: Image("Card1"), color: Color("card1")),
         Section(title: "Build a SwiftUi app", text: "20 sections", logo: "Logo2", image: Image("Card2"), color: Color("card2")),
@@ -64,6 +65,20 @@ struct HomeView: View {
                 Spacer()
 
                 AvatarView(showProfile: $showProfile)
+
+                Button(action: { showUpdate.toggle() }) {
+                    Image(systemName: "bell")
+                      .renderingMode(.original)
+                      .font(.system(size: 16, weight: .medium))
+                      .frame(width: 36, height: 36)
+                      .background(Color.white)
+                      .cornerRadius(18)
+                      .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+                      .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1)
+                }
+                  .sheet(isPresented: $showUpdate) {
+                      ContentView()
+                  }
             }
               .padding(.horizontal)
               .padding(.leading, 14)
