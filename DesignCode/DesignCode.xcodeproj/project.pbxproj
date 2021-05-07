@@ -25,6 +25,7 @@
 		37B2197A5E7E5920675240DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2102CF66905DA7060E34E /* CardView.swift */; };
 		37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21AA0434ADE3B0607C332 /* MenuRow.swift */; };
 		37B21C0D70D4203051FF4AD9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2108D3CF7FBDDBFFAA02E /* HomeView.swift */; };
+		D41488482644C0A1000EB3DD /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B21F044C5F4B6281823231 /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		37B21D48C2C80577C9FD4A3E /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		37B21E0B604003A0B253C32B /* BottomCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
 		37B21E5DB0884C88155A1B2C /* BackCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		37B21F044C5F4B6281823231 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		37B21F12406CD18F8E7023B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				D4676A6E2640C754009E9F02 /* Menu */,
 				D4676A6D2640C6A9009E9F02 /* Card */,
 				37B212D4E84B68A7E0FE9155 /* TabBar.swift */,
+				37B21D37C5B07059FB2372B7 /* Shared */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -99,6 +102,14 @@
 				37B21BFCD58C9CAF3C57FBD1 /* DesignCode.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		37B21D37C5B07059FB2372B7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				37B21F044C5F4B6281823231 /* RingView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		37B21FC006553A4B7502CF8A /* Preview Content */ = {
@@ -211,6 +222,7 @@
 				37B218E4B3092906D2D18D86 /* BackCardView.swift in Sources */,
 				37B212E81E32BD51B800DFC4 /* TitleView.swift in Sources */,
 				37B2134F0A2D668902B63EAF /* BottomCardView.swift in Sources */,
+				D41488482644C0A1000EB3DD /* RingView.swift in Sources */,
 				37B2158B28CB6F6E48EBE576 /* MenuView.swift in Sources */,
 				37B21BD3A54A811C3BB32CB8 /* MenuRow.swift in Sources */,
 				37B21C0D70D4203051FF4AD9 /* HomeView.swift in Sources */,
