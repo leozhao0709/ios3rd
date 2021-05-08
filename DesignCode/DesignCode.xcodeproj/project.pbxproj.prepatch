@@ -242,15 +242,6 @@
 		37B2185DEE6ADEB9F8BAABBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-                OTHER_LDFLAGS = (
-                    "-Xlinker",
-                    "-interposable",
-                    "-Xlinker",
-                    "-undefined",
-                    "-Xlinker",
-                    dynamic_lookup,
-                );
-                ENABLE_BITCODE = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -366,15 +357,6 @@
 		37B21E3696DC838977FC2E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-                OTHER_LDFLAGS = (
-                    "-Xlinker",
-                    "-interposable",
-                    "-Xlinker",
-                    "-undefined",
-                    "-Xlinker",
-                    dynamic_lookup,
-                );
-                ENABLE_BITCODE = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";

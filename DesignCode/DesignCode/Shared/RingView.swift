@@ -10,7 +10,7 @@ struct RingView: View {
     var color2 = Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
     var width: CGFloat = 44
     var height: CGFloat = 44
-    var percent: CGFloat = 88
+    var percent: CGFloat = 44
 
     var body: some View {
         let multiplier = width / 44
@@ -38,7 +38,7 @@ struct RingView: View {
               .shadow(color: color2.opacity(0.1), radius: 3, x: 0, y: 3)
               .rotationEffect(.degrees(-90))
 
-            Text("\(percent)%")
+            Text("\(Int(percent))%")
               .font(.system(size: 14 * multiplier))
               .fontWeight(.bold)
         }
