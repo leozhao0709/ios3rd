@@ -15,14 +15,15 @@ struct ContentView: View {
     var body: some View {
         Text("iPhone11")
             .onTapGesture {
-                withAnimation {
-                    self.showDetail.toggle()
-                }
+//                withAnimation {
+                    showDetail.toggle()
+//                }
             }
 
         if showDetail {
             DetailView()
               .transition(.slide)
+              .animation(.easeInOut)
         }
 
 //        .fullScreenCover(isPresented: $showDetail) {
