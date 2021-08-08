@@ -30,7 +30,7 @@ struct ContentView: View {
             expense.expenses.remove(atOffsets: indexSet)
           }
       }
-        .navigationBarTitle("费用支出")
+        .navigationBarTitle("费用支出123")
         .navigationBarItems(
           trailing: Button(action: { self.showSheet = true }, label: { Image(systemName: "plus") }))
         .sheet(isPresented: $showSheet, content: {
